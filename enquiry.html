@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Place Order - Delight Home Bakery</title>
+</head>
+<body>
+    <!-- Header section with navigation -->
+    <header>
+        <img src="_images/logo/logo (1).png" alt="Delight Home Bakery Logo" width="100" height="80"> 
+        <h1>Delight Home Bakery</h1>        
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="enquiry.html">Order</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="checkout.html">Checkout</a></li>
+                <li><a href="profile.html">Profile</a></li>
+            </ul>
+        </nav>
+        <button class="theme-toggle" onclick="toggleTheme()">🌙 Dark Mode</button>
+            <div class="mobile-menu" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+    </header>
+
+    <!-- Main content of the enquiry page -->
+    <main>
+        <!-- Page title -->
+        <h2>Place Your Order</h2>
+        <p>We're here to fulfill your bakery cravings</p>
+        
+        <!-- Order form -->
+        <form action="#" method="post">
+            <fieldset>
+                <legend>Order Request Form</legend>
+                
+                <!-- Name field -->
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+                <br><br>
+                
+                <!-- Email field -->
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+                <br><br>
+                
+                <!-- Phone field -->
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+                <br><br>
+                
+                <!-- Order type selection -->
+                <label for="order-type">Order Type:</label>
+                <select id="order-type" name="order-type" required>
+                    <option value="">Please select...</option>
+                    <option value="pickup">Store Pickup</option>
+                    <option value="delivery">Local Delivery</option>
+                    <option value="catering">Catering Event</option>
+                    <option value="custom">Custom Cake</option>
+                </select>
+                <br><br>
+                
+                <!-- Date selection -->
+                <label for="date">Preferred Date:</label>
+                <input type="date" id="date" name="date" required>
+                <br><br>
+                
+                <!-- Time selection -->
+                <label for="time">Preferred Time:</label>
+                <input type="time" id="time" name="time">
+                <br><br>
+                
+                <!-- Items requested -->
+                <label for="items">Items Requested:</label><br>
+                <textarea id="items" name="items" rows="4" cols="50" placeholder="Please list the items you'd like to order..." required></textarea>
+                <br><br>
+                
+                <!-- Allergies information -->
+                <label for="allergies">Allergies or Dietary Restrictions:</label><br>
+                <textarea id="allergies" name="allergies" rows="3" cols="50" placeholder="List any allergies or dietary needs..."></textarea>
+                <br><br>
+                
+                <!-- Submit button -->
+                <button type="submit">Submit Order Request</button>
+            </fieldset>
+        </form>
+        
+        <!-- Ordering information section -->
+        <section>
+            <h3>Ordering Information</h3>
+            
+            <!-- Order notice -->
+            <article>
+                <h4>Order Notice</h4>
+                <p>We require 24 hours notice for all custom orders. For wedding cakes and large events, please contact us at least 2 weeks in advance.</p>
+            </article>
+            
+            <!-- Delivery areas -->
+            <article>
+                <h4>Delivery Areas</h4>
+                <p>We deliver to the following areas:</p>
+                <ul>
+                    <li>Ruimsig</li>
+                    <li>Weltevreden Park</li>
+                    <li>Constantia Kloof</li>
+                    <li>Northcliff</li>
+                    <li>Fairland</li>
+                    <li>and surrounding areas</li>
+                </ul>
+            </article>
+            
+            <!-- Payment options -->
+            <article>
+                <h4>Payment Options</h4>
+                <p>We accept cash, credit cards, and Zapper. Payment is required when placing your order.</p>
+            </article>
+            
+            <!-- Contact information -->
+            <article>
+                <h4>Contact Us</h4>
+                <p>For urgent orders or questions, call us at: +27 11 123 4567</p>
+                <p>Or email: orders@delighthomebakery.co.za</p>
+            </article>
+        </section>
+    </main>
+
+    <!-- Footer with contact information and copyright -->
+    <footer>
+        <p>&copy; 2025 Delight Home Bakery. All rights reserved.</p>
+        <p>Follow us on social media for daily specials and updates!</p>
+        <p>
+            <a href="#">Facebook</a> | 
+            <a href="#">Instagram</a> | 
+            <a href="#">Twitter</a>
+        </p>
+    </footer>
+</body>
+</html>

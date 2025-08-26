@@ -1,0 +1,44 @@
+Project Name: Delight Home Bakery Website
+
+Description:
+A responsive website for a home-based bakery business called "Delight Home Bakery". The website showcases their products, allows customers to place orders, and provides information about the business.
+
+Key Features:
+- Multi page website with navigation between sections
+- Product catalog organized by categories (breads, pastries, cakes, )
+- Product display with images, descriptions, and prices
+- Dark/light mode toggle functionality
+- Contact information and social media links
+
+File Structure:
+- index.html (Home page)
+- about.html (About us page)
+- products.html (Products catalog - current page)
+- enquiry.html (Order form page)
+- contact.html (Contact information)
+- checkout.html (Shopping cart checkout)
+- profile.html (User account page)
+- _images/ (Directory containing all images)
+  - logo/ (Business logo files)
+  - product/ (Product images organized by category)
+    - bread/
+    - pastries/
+    - cakes/
+
+Technologies Used:
+- HTML for structure
+- CSS for styling (not included in the provided code)
+- JavaScript for interactive elements (dark mode, mobile menu)
+
+Target Audience:
+- Local customers looking for fresh baked goods
+- People interested in custom cakes for special occasions and work events
+- Regular customers who want to place orders online or visite the store
+
+Business Value:
+- Increases visibility for the home bakery business
+- Provides an easy way for customers to view products and prices
+- Streamlines the ordering process for custom requests
+- Builds brand identity with consistent presentation
+
+
