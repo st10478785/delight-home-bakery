@@ -1,104 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - Delight Home Bakery</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <!-- Header section with navigation -->
     <header>
-        <img src="_images/logo/logo (1).png" alt="Delight Home Bakery Logo" width="100" height="80"> 
-        <h1>Delight Home Bakery</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li>About</li>
-                <li><a href="products.html">Products</a></li>
-                <li><a href="enquiry.html">Order</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="checkout.html">Checkout</a></li>
-                <li><a href="profile.html">Profile</a></li>
-            </ul>
-        </nav>
-        <button class="theme-toggle" onclick="toggleTheme()">🌙 Dark Mode</button>
-            <div class="mobile-menu" onclick="toggleMobileMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
+        <div class="header-container">
+            <div class="logo-container">
+                <img src="_images/logo/logo (1).png" alt="Delight Home Bakery Logo">
+                <div class="logo-text">
+                    <h1>Delight Home Bakery</h1>
+                    <span>Since 2004</span>
+                </div>
             </div>
+
+            <button class="menu-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li>About</li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="enquiry.html">Order</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="checkout.html">Checkout</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <div class="cart-icon">
+                    🛒
+                    <span class="cart-count">3</span>
+                </div>
+                <button class="theme-toggle">🌙 Dark Mode</button>
+                <div class="mobile-menu" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
     </header>
 
+    <!-- Page Banner -->
+    <section class="page-banner">
+        <div class="page-banner-content">
+            <h2>About Delight Home Bakery</h2>
+            <p>Our story, values, and passion for baking</p>
+        </div>
+    </section>
+
     <!-- Main content of the about page -->
-    <main>
-        <!-- Page title -->
-        <h2>About Delight Home Bakery</h2>
-        <p>Our story, values, and passion for baking</p>
-        
+    <br>
+    <main class="container">
         <!-- Our story section -->
-        <section>
-            <h3>Our Story</h3>
-            <p>Founded in 2004 by a passionate baker, Vishay Gosai. The Delight Home Bakery has been serving the Johannesburg community with the finest baked goods for nearly two decades. What started as a small neighborhood bakery has grown into a beloved local institution.</p>
+        <section class="about-section">
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Our Story</h3>
+                    <p>Founded in 2004 by a passionate baker, Vishay Gosai. The Delight Home Bakery has been serving the
+                        Johannesburg community with the finest baked goods for nearly two decades. What started as a
+                        small neighborhood bakery has grown into a beloved local institution.</p>
+                </div>
+                <div class="about-image">
+                    <img src="_images/about/Bakery.jpg" alt="Our Bakery Interior">
+                </div>
+            </div>
         </section>
-        
+
         <!-- Our mission section -->
-        <section>
-            <h3>Our Mission</h3>
-            <p>Our mission is simple: to bring you the freshest, most delicious baked goods made from the finest ingredients. Every morning, our dedicated team arrives before dawn to prepare our signature breads, pastries, and cakes, ensuring that each item meets our high standards of quality and taste.</p>
+        <br>
+        <br>
+        <section class="about-section section-dark">
+            <div class="section-title">
+                <h3>Our Mission</h3>
+            </div>
+            <p class="text-center">We pride our selfs to bring you the freshest and most delicious baked goods made from
+                the finest of ingredients. Every morning, our dedicated team arrives before dawn to prepare our
+                signature breads, pastries, and cakes, ensuring that each item meets our high standards of quality and
+                taste.</p>
+                <br>
         </section>
-        
+
         <!-- Our values section -->
-        <section>
-            <h3>Our Values</h3>
-            <p>We believe in supporting our local community and use locally sourced ingredients whenever possible. From our famous sourdough bread to our decadent chocolate cakes, every item is crafted with care and attention to detail.</p>
-        </section>
-        
-        <!-- Core values list -->
-        <section>
-            <h3>Our Core Values</h3>
-            <ul>
-                <!-- First core value -->
-                <li>
+        <br>
+        <br>
+        <section class="about-section">
+            <div class="section-title">
+                <h3>Our Core Values</h3>
+            </div>
+
+            <div class="features">
+                <div class="feature">
+                    <div class="core-icon">🌾</div>
                     <h4>Quality Ingredients</h4>
                     <p>We source the finest local ingredients to ensure the best flavor in every bite.</p>
-                </li>
-                
-                <!-- Second core value -->
-                <li>
+                </div>
+
+                <div class="feature">
+                    <div class="core-icon">👨‍🍳</div>
                     <h4>Traditional Methods</h4>
                     <p>We use time honored baking techniques to create authentic baked goods.</p>
-                </li>
-                
-                <!-- Third core value -->
-                <li>
+                </div>
+
+                <div class="feature">
+                    <div class="core-icon">🤝</div>
                     <h4>Community Focus</h4>
                     <p>We believe in supporting our local community and building lasting relationships.</p>
-                </li>
-                
-                <!-- Fourth core value -->
-                <li>
-                    <h4>Sustainability</h4>
+                </div>
+
+                <div class="feature">
+                    <div class="core-icon">🌍</div>
+                    <h4> Business Sustainability</h4>
                     <p>We're committed to environmentally friendly practices in our bakery.</p>
-                </li>
-            </ul>
+                </div>
+            </div>
         </section>
-        
+
         <!-- Head baker section -->
-        <section>
-            <h3>Meet Our Head Baker</h3>
-            <p>Vishay started baking with his mother at age 7. He soon had formal training in Paris and a local Bakery, he returned to Johannesburg to share his passion with the community. With over 20 years of experience, he personally oversees the creation of every recipe and ensures each product meets his exacting standards.</p>
+        <section class="about-section">
+            <div class="section-title">
+                <h3>Meet Our Head Baker</h3>
+            </div>
+
+            <div class="baker-profile">
+                <div class="baker-image">
+                    <img src="_images/about/Boss2.JPG" alt="Head Baker Vishay Gosai">
+                </div>
+                <div class="baker-details">
+                    <h4>Vishay Gosai</h4>
+                    <p>Vishay started baking with his mother at age 7. He soon had formal training in Paris and a local
+                        Bakery, he returned to Johannesburg to share his passion with the community. With over 20 years
+                        of experience, he personally oversees the creation of every recipe and ensures each product
+                        meets his exacting standards.</p>
+                    <p class="baker-signature">"Baking is my passion, and I put my heart into every loaf and pastry that
+                        leaves our bakery."</p>
+                </div>
+            </div>
         </section>
     </main>
 
     <!-- Footer with contact information and copyright -->
     <footer>
-        <p>&copy; 2025 Delight Home Bakery. All rights reserved.</p>
-        <p>Follow us on social media for daily specials and updates!</p>
-        <p>
-            <a href="#">Facebook</a> | 
-            <a href="#">Instagram</a> | 
-            <a href="#">Twitter</a>
-        </p>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Delight Home Bakery</h3>
+                    <p>Fresh baked goods made with love since 2004. We specialize in artisanal bread, pastries, and
+                        custom cakes.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-icon">f</a>
+                        <a href="#" class="social-icon">in</a>
+                        <a href="#" class="social-icon">t</a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li>About</li>
+                        <li><a href="products.html">Our Products</a></li>
+                        <li><a href="enquiry.html">Place Order</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Contact Info</h3>
+                    <address>
+                        123 Baker Street<br>
+                        Ruimsig, Roodepoort<br>
+                        Johannesburg, 1724<br>
+                        South Africa
+                    </address>
+                    <p>Phone: <a href="tel:+27111234567">+27 11 123 4567</a></p>
+                    <p>Email: <a href="mailto:orders@delighthomebakery.co.za">orders@delighthomebakery.co.za</a></p>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Hours</h3>
+                    <ul class="footer-links">
+                        <li>Monday - Friday: 6:00 AM - 6:00 PM</li>
+                        <li>Saturday: 7:00 AM - 5:00 PM</li>
+                        <li>Sunday: 8:00 AM - 3:00 PM</li>
+                        <li>Public Holidays: 8:00 AM - 2:00 PM</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Delight Home Bakery. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
 </body>
+
 </html>
