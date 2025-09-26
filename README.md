@@ -345,6 +345,19 @@ delight_home_bakery/
 - Performance optimization and loading times
 - SEO optimization and meta tags
 
+#### Documentation
+
+I added more informaton my document
+I did improvements from my feedback in a differnt colour
+I added more References
+
+CSS for Desktop
+I used a separate style.css file and linked it to all my pages.
+A CSS reset that makes sure everything looks the same across browsers.
+I set up font sizes for headings and body text, and used nice fonts for a clear look.
+Layouts are built with Grid (for sections) and Flexbox (for alignment).
+Buttons and inputs have hover and focus effects for better interaction.
+
 ## References
 
 Apple (2023) Human Interface Guidelines. Available at: https://developer.apple.com/design/human-interface-guidelines/ (Accessed: 15 September 2025).
