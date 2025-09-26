@@ -1,44 +1,199 @@
-Project Name: Delight Home Bakery Website
+=========================================
+|| DELIGHT HOME BAKERY WEBSITE PROJECT ||
+=========================================
 
-Description:
-A responsive website for a home-based bakery business called "Delight Home Bakery". The website showcases their products, allows customers to place orders, and provides information about the business.
+Overview
 
-Key Features:
-- Multi page website with navigation between sections
-- Product catalog organized by categories (breads, pastries, cakes, )
-- Product display with images, descriptions, and prices
-- Dark/light mode toggle functionality
-- Contact information and social media links
+Delight Home Bakery is a comprehensive e-commerce website for a local artisanal bakery established in 2004. The platform serves as both a digital storefront and online ordering system, designed to enhance the bakery's online presence, facilitate orders, and communicate the brand story and values through an engaging user experience.
 
-File Structure:
-- index.html (Home page)
-- about.html (About us page)
-- products.html (Products catalog - current page)
-- enquiry.html (Order form page)
-- contact.html (Contact information)
-- checkout.html (Shopping cart checkout)
-- profile.html (User account page)
-- _images/ (Directory containing all images)
-  - logo/ (Business logo files)
-  - product/ (Product images organized by category)
-    - bread/
-    - pastries/
-    - cakes/
+Project details
 
-Technologies Used:
-- HTML for structure
-- CSS for styling (not included in the provided code)
-- JavaScript for interactive elements (dark mode, mobile menu)
+• Project Name: Delight Home Bakery Website
+• Student Name: Vishay Gosai
+• Student ID: ST10478785
+• Course: WEDE5020
+• Project Type: Responsive E-commerce Website
+• Technology Stack: HTML, CSS (No JavaScript implemented yet)
 
-Target Audience:
-- Local customers looking for fresh baked goods
-- People interested in custom cakes for special occasions and work events
-- Regular customers who want to place orders online or visite the store
+Website architecture
+The website consists of 7 main pages:
 
-Business Value:
-- Increases visibility for the home bakery business
-- Provides an easy way for customers to view products and prices
-- Streamlines the ordering process for custom requests
-- Builds brand identity with consistent presentation
+1. HOME PAGE (index.html)
+   - Welcoming hero section with call-to-action buttons
+   - Featured daily specials with product highlights
+   - Store information and hours
+   - Navigation to all sections
+
+2. ABOUT PAGE (about.html)
+   - Bakery history and founding story
+   - Mission and values statements
+   - Team introduction with head baker profile
+   - Community involvement details
+
+3. PRODUCTS PAGE (products.html)
+   - Comprehensive menu organized by categories:
+     * Artisan Breads (6 products)
+     * Pastries & Croissants (4 products)
+     * Cakes & Desserts (4 products)
+     * Cookies & Biscuits (4 products)
+     * Coffee & Beverages (4 products)
+   - Seasonal specials section
+   - Custom order information
+
+4. ORDER PAGE (enquiry.html)
+   - Google Forms integration for order requests
+   - Delivery area information
+   - Ordering policies and requirements
+   - Contact information for urgent orders
+
+5. CONTACT PAGE (contact.html)
+   - Complete contact details and location information
+   - Interactive contact form
+   - Google Maps integration
+   - Hours of operation table
+   - FAQ section
+
+6. CHECKOUT PAGE (checkout.html)
+   - Shopping cart with itemized order summary
+   - Customer information collection forms
+   - Delivery scheduling interface
+   - Multiple payment method options
+   - Order confirmation system
+
+7. PROFILE PAGE (profile.html)
+   - User account management
+   - Order history tracking
+   - Address book management
+   - Preference settings
+   - Loyalty program information
+
+Colour palette:
+• Primary Color: #1c2d26 ( Green ) - Used for headings, navigation, and primary elements
+• Secondary Color: #E8A735 (Golden Orange) - Used for buttons, accents, and highlights
+• Accent Color: #D35400 (Dark Orange) - Used for hover states and secondary accents
+• Background Color: #FDF6E3 (Warm Cream) - Main background color
+• Light Background: #FFFFFF (White) - Card backgrounds and sections
+• Text Color: #333333 (Dark Gray) - Primary text color
+• Light Text: #777777 (Medium Gray) - Secondary text and descriptions
+
+Typography:
+• Headings: Playfair Display (Serif font) - Used for all h1-h6 elements
+• Body Text: Lato (Sans-serif font) - Used for paragraphs and general content
+• Font Weights: Regular (400) and Bold (700) variations
+
+Imagery:
+• Source: Unsplash and Pexels for high quality food photography
+• Logo: Custom designed using Procreate software
+• Product Images: Organized by category in _images folder structure
+• Consistency: All images follow a cohesive style with proper lighting and composition
+
+Visual elements:
+• Border Radius: 10px for consistent rounded corners
+• Shadows: Multi-layer shadow system for depth (var(--shadow) and var(--shadow-hover))
+• Spacing: Consistent padding and margin system using CSS variables
+• Transitions: Smooth 0.3s ease transitions for interactive elements
+• Badges: Always visible product labels (Best Seller, Popular, Favorite, New)
+
+User experience features
+
+Responsive design:
+• Mobile-first approach with breakpoints at 480px, 768px, 900px, and 1024px
+• Flexible grid systems using CSS Grid and Flexbox
+• Optimized touch targets for mobile devices
+• Responsive images with proper aspect ratios
+
+Navigation:
+• Consistent header navigation across all pages
+• Sticky navigation bar for easy access
+• Active page indicators
+• Mobile hamburger menu for smaller screens
+• Breadcrumb navigation (where applicable)
+
+Interactive elements:
+• Hover effects on buttons and cards
+• Smooth scrolling and transitions
+• Form validation indicators
+• Loading states and feedback
+• Cart icon with item count
+
+Accessibility features:
+• Semantic HTML structure
+• ARIA labels where appropriate
+• Proper heading hierarchy
+• Color contrast compliance
+• Keyboard navigation support
+
+Technical specifications
+
+HTML STRUCTURE:
+• HTML5 elements (header, nav, main, section, article, footer)
+• Proper document structure with meta tags
+• SEO-optimized heading hierarchy
+• Commented code
+
+CSS ARCHITECTURE:
+• CSS Variables for consistent theming
+• Modular component-based styling
+• Responsive design patterns
+• Optimized for performance
+• Cross-browser compatibility
+
+FILE ORGANIZATION:
+• Root directory contains all HTML files
+• CSS folder with style.css file
+• Images organized in _images subfolders:
+  - _images/logo/ - Brand logos
+  - _images/hero/ - Hero section images
+  - _images/product/ - Product photography
+  - _images/about/ - Team and bakery photos
 
 
+Business objectives
+
+Primary goals:
+• Establish a professional online presence for Delight Home Bakery
+• Increase online sales through e-commerce functionality
+• Enhance brand awareness and storytelling
+• Improve customer convenience through online ordering
+• Drive customer engagement and community connection
+
+Smart objectives:
+• Implement a functional e-commerce system enabling online orders for in-store pickup and local delivery within 12 weeks
+• Create dedicated content sections to communicate the bakery's history and values
+• Ensure key information is accessible within two clicks from any page, reducing information-seeking calls by 50%
+• Build an email subscriber list of 100+ contacts within one month of launch
+• Achieve a minimum of 15 online orders per week within one month of launch
+
+
+Website Content
+
+Core Brand Messaging
+Mission: To provide our community with the highest quality, handcrafted baked goods made from locally sourced ingredients, delivered with warmth and old-fashioned customer service.
+Vision: To become the most beloved and trusted local bakery in our community, both in-store and online.
+Values: Quality craftsmanship, community support, tradition honoring, innovation.
+
+Product Offerings
+- Artisan Breads: Rustic Sourdough, Whole Grain Harvest, French Baguette
+- Pastries: Butter Croissant, Almond Croissant, Cinnamon Roll
+- Cakes & Desserts: Chocolate Decadence, Classic Carrot Cake, Seasonal Fruit Tart
+- Savory Items: Spinach & Feta Pastry, Chicken & Mushroom Pie
+
+Operational Details
+Location: 123 Bakery Street, Johannesburg, Gauteng 1724
+Contact: +27 11 123 4567 | info@delighthomebakery.co.za
+Hours: Mon-Fri 7AM-6PM, Sat 7AM-4PM, Sun 8AM-2PM
+Delivery: Ruimsig and surrounding areas (10km radius)
+
+
+Tools & Resources
+- Design Software: Procreate (wireframes, Gantt chart, logo)
+- Image Sources: Unsplash, Pexels (high-quality food photography)
+- Icons: Font Awesome icon library
+- Typography: Google Fonts (Playfair Display, Lato)
+- Inspiration: Various bakery websites and e-commerce platforms
+
+Technical References
+- MDN Web Docs for HTML and CSS standards
+- W3Schools for implementation examples
+- Google Developers for Core Web Vitals optimization
+- Web.dev for modern web development patterns
