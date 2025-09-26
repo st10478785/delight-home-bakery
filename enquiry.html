@@ -1,106 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Place Order - Delight Home Bakery</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <!-- Header section with navigation -->
     <header>
-        <img src="_images/logo/logo (1).png" alt="Delight Home Bakery Logo" width="100" height="80"> 
-        <h1>Delight Home Bakery</h1>        
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li>Order</li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="checkout.html">Checkout</a></li>
-                <li><a href="profile.html">Profile</a></li>
-            </ul>
-        </nav>
-        <button class="theme-toggle" onclick="toggleTheme()">🌙 Dark Mode</button>
-            <div class="mobile-menu" onclick="toggleMobileMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
+        <div class="header-container">
+            <div class="logo-container">
+                <img src="_images/logo/logo (1).png" alt="Delight Home Bakery Logo">
+                <div class="logo-text">
+                    <h1>Delight Home Bakery</h1>
+                    <span>Since 2004</span>
+                </div>
             </div>
+
+            <button class="menu-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li>Order</li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="checkout.html">Checkout</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <div class="cart-icon">
+                    🛒
+                    <span class="cart-count">3</span>
+                </div>
+                <button class="theme-toggle">🌙 Dark Mode</button>
+                <div class="mobile-menu" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
     </header>
 
+    <!-- Page Banner -->
+    <section class="page-banner">
+        <div class="page-banner-content">
+            <h2>Place Your Order</h2>
+            <p>We're here to fulfill your bakery cravings</p>
+        </div>
+    </section>
+
     <!-- Main content of the enquiry page -->
-    <main>
-        <!-- Page title -->
-        <h2>Place Your Order</h2>
-        <p>We're here to fulfill your bakery cravings</p>
-        
-        <!-- Order form -->
-        <form action="#" method="post">
-            <fieldset>
-                <legend>Order Request Form</legend>
-                
-                <!-- Name field -->
-                <label for="name">Full Name:</label>
-                <input type="text" id="name" name="name" required>
-                <br><br>
-                
-                <!-- Email field -->
-                <label for="email">Email Address:</label>
-                <input type="email" id="email" name="email" required>
-                <br><br>
-                
-                <!-- Phone field -->
-                <label for="phone">Phone Number:</label>
-                <input type="tel" id="phone" name="phone" required>
-                <br><br>
-                
-                <!-- Order type selection -->
-                <label for="order-type">Order Type:</label>
-                <select id="order-type" name="order-type" required>
-                    <option value="">Please select...</option>
-                    <option value="pickup">Store Pickup</option>
-                    <option value="delivery">Local Delivery</option>
-                    <option value="catering">Catering Event</option>
-                    <option value="custom">Custom Cake</option>
-                </select>
-                <br><br>
-                
-                <!-- Date selection -->
-                <label for="date">Preferred Date:</label>
-                <input type="date" id="date" name="date" required>
-                <br><br>
-                
-                <!-- Time selection -->
-                <label for="time">Preferred Time:</label>
-                <input type="time" id="time" name="time">
-                <br><br>
-                
-                <!-- Items requested -->
-                <label for="items">Items Requested:</label><br>
-                <textarea id="items" name="items" rows="4" cols="50" placeholder="Please list the items you'd like to order..." required></textarea>
-                <br><br>
-                
-                <!-- Allergies information -->
-                <label for="allergies">Allergies or Dietary Restrictions:</label><br>
-                <textarea id="allergies" name="allergies" rows="3" cols="50" placeholder="List any allergies or dietary needs..."></textarea>
-                <br><br>
-                
-                <!-- Submit button -->
-                <button type="submit">Submit Order Request</button>
-            </fieldset>
-        </form>
-        
-        <!-- Ordering information section -->
+    <main class="container">
+        <!-- Google Form -->
         <section>
+            <h3>Order Form</h3>
+            <div class="google-form-container">
+                <iframe
+                    src="https://docs.google.com/forms/d/e/1FAIpQLSf3bYFUCWP5HPJyeyVM7yPCK71vYlxnT9aDsLew8JUfTsVmIQ/viewform?embedded=true"
+                    width="100%" height="2230" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+            </div>
+        </section>
+
+        <!-- Ordering information section -->
+        <br>
+        <br>
+        <section class="order-info">
             <h3>Ordering Information</h3>
-            
+
             <!-- Order notice -->
             <article>
                 <h4>Order Notice</h4>
-                <p>We require 24 hours notice for all custom orders. For wedding cakes and large events, please contact us at least 2 weeks in advance.</p>
+                <p>We require 24 hours notice for all custom orders. For wedding cakes and large events, please contact
+                    us at least 2 weeks in advance.</p>
             </article>
-            
+
             <!-- Delivery areas -->
             <article>
                 <h4>Delivery Areas</h4>
@@ -114,13 +99,13 @@
                     <li>and surrounding areas</li>
                 </ul>
             </article>
-            
+
             <!-- Payment options -->
             <article>
                 <h4>Payment Options</h4>
-                <p>We accept cash, credit cards, and Zapper. Payment is required when placing your order.</p>
+                <p>We accept cash and credit cards. Payment is required when placing your order or a deposit.</p>
             </article>
-            
+
             <!-- Contact information -->
             <article>
                 <h4>Contact Us</h4>
@@ -132,13 +117,58 @@
 
     <!-- Footer with contact information and copyright -->
     <footer>
-        <p>&copy; 2025 Delight Home Bakery. All rights reserved.</p>
-        <p>Follow us on social media for daily specials and updates!</p>
-        <p>
-            <a href="#">Facebook</a> | 
-            <a href="#">Instagram</a> | 
-            <a href="#">Twitter</a>
-        </p>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Delight Home Bakery</h3>
+                    <p>Fresh baked goods made with love since 2004. We specialize in artisanal bread, pastries, and
+                        custom cakes.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-icon">f</a>
+                        <a href="#" class="social-icon">in</a>
+                        <a href="#" class="social-icon">t</a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="products.html">Our Products</a></li>
+                        <li><a href="enquiry.html">Place Order</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Contact Info</h3>
+                    <address>
+                        123 Baker Street<br>
+                        Ruimsig, Roodepoort<br>
+                        Johannesburg, 1724<br>
+                        South Africa
+                    </address>
+                    <p>Phone: <a href="tel:+27111234567">+27 11 123 4567</a></p>
+                    <p>Email: <a href="mailto:orders@delighthomebakery.co.za">orders@delighthomebakery.co.za</a></p>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Hours</h3>
+                    <ul class="footer-links">
+                        <li>Monday - Friday: 6:00 AM - 6:00 PM</li>
+                        <li>Saturday: 7:00 AM - 5:00 PM</li>
+                        <li>Sunday: 8:00 AM - 3:00 PM</li>
+                        <li>Public Holidays: 8:00 AM - 2:00 PM</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Delight Home Bakery. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
 </body>
+
 </html>
