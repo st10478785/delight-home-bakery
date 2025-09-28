@@ -302,6 +302,35 @@ delight_home_bakery/
 - **Tablet**: iPad (current circulation devices)
 - **Desktop**: My Dell Laptop, Multiple screen sizes (1280px to 3840px)
 
+## Screenshots for different screen sizes
+
+### Desktop
+[Desktop](<_images/screenshots/Desktop/Desktop_Index.jpeg>)
+[Desktop](<_images/screenshots/Desktop/Desktop_About.jpeg>)
+[Desktop](<_images/screenshots/Desktop/Desktop_Products.jpeg>)
+[Desktop](<_images/screenshots/Desktop/Desktop_Enquiry.jpeg>)
+[Desktop](<_images/screenshots/Desktop/Desktop_Contact.jpeg>)
+[Desktop](<_images/screenshots/Desktop/Desktop_Checkout.jpeg>)
+[Desktop](<_images/screenshots/Desktop/Desktop_Profile.jpeg>)
+
+### Tablet
+[Tablet](<_images/screenshots/Tablet/Tablet_Index.jpeg>)
+[Tablet](<_images/screenshots/Tablet/Tablet_About.jpeg>)
+[Tablet](<_images/screenshots/Tablet/Tablet_Products.jpeg>)
+[Tablet](<_images/screenshots/Tablet/Tablet_Enquiry.jpeg>)
+[Tablet](<_images/screenshots/Tablet/Tablet_Contact.jpeg>)
+[Tablet](<_images/screenshots/Tablet/Tablet_Checkout.jpeg>)
+[Tablet](<_images/screenshots/Tablet/Tablet_Profile.jpeg>)
+
+### Phone
+[Phone](<_images/screenshots/Phone/Phone_Index.jpeg>)
+[Phone](<_images/screenshots/Phone/Phone_About.jpeg>)
+[Phone](<_images/screenshots/Phone/Phone_Products.jpeg>)
+[Phone](<_images/screenshots/Phone/Phone_Enquiry.jpeg>)
+[Phone](<_images/screenshots/Phone/Phone_Contact.jpeg>)
+[Phone](<_images/screenshots/Phone/Phone_Checkout.jpeg>)
+[Phone](<_images/screenshots/Phone/Phone_Profile.jpeg>)
+
 ## Changelog ( Learned from YouTube )
 
 ### Version 1 - Initial Release (25 August 2025)
