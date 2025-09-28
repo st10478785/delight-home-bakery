@@ -2,16 +2,19 @@
 <html lang="en">
 
 <head>
+    <!-- Document setup  -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkout - Delight Home Bakery</title>
+    <!-- Linking external CSS file for styling -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <!-- Header section with navigation -->
+    <!-- Header section, which is consistent across all pages for navigation -->
     <header>
         <div class="header-container">
+            <!-- Logo and business name section -->
             <div class="logo-container">
                 <img src="_images/logo/logo (1).png" alt="Delight Home Bakery Logo">
                 <div class="logo-text">
@@ -20,6 +23,7 @@
                 </div>
             </div>
 
+            <!-- Main navigation menu -->
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -27,18 +31,21 @@
                     <li><a href="products.html">Products</a></li>
                     <li><a href="enquiry.html">Order</a></li>
                     <li><a href="contact.html">Contact</a></li>
+                    <!-- Current page is not a link an active state -->
                     <li>Checkout</li>
                     <li><a href="profile.html">Profile</a></li>
                 </ul>
             </nav>
 
+            <!-- Header actions, cart, theme toggle, mobile menu -->
             <div class="header-actions">
                 <div class="cart-icon">
                     🛒
                     <span class="cart-count">3</span>
                 </div>
                 <button class="theme-toggle">🌙 Dark Mode</button>
-                <div class="mobile-menu" onclick="toggleMenu()"> <!-- Ment for the hamburger menu, I cant use it as it uses JavaScript -->
+                <!-- Mobile hamburger menu (requires JavaScript) -->
+                <div class="mobile-menu" onclick="toggleMenu()">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -47,7 +54,7 @@
         </div>
     </header>
 
-    <!-- Page Banner -->
+    <!-- Page Banner  -->
     <section class="page-banner">
         <div class="page-banner-content">
             <h2>Checkout</h2>
@@ -55,12 +62,13 @@
         </div>
     </section>
 
-    <!-- Main content of the checkout page -->
+    <!-- Main content area of the checkout page -->
     <main class="container">
         <div class="checkout-container">
-            <!-- Order summary section -->
+            <!-- Order summary section: Shows items in cart with pricing -->
             <section>
                 <h3>Your Order</h3>
+                <!-- Table for displaying order details -->
                 <table>
                     <thead>
                         <tr>
@@ -90,6 +98,7 @@
                             <td>R66</td>
                         </tr>
                     </tbody>
+                    <!-- Table footer for summary calculations -->
                     <tfoot>
                         <tr>
                             <td colspan="3">Subtotal</td>
@@ -106,6 +115,7 @@
                     </tfoot>
                 </table>
 
+                <!-- Delivery information display -->
                 <div class="mt-2">
                     <h4>Delivery Information</h4>
                     <p><strong>Estimated Delivery:</strong> Today, 3:00 PM - 5:00 PM</p>
@@ -113,10 +123,12 @@
                 </div>
             </section>
 
-            <!-- Customer information form -->
+            <!-- Customer information form: Collects shipping and payment details -->
             <section>
                 <h3>Customer Information</h3>
+                <!-- Comprehensive checkout form -->
                 <form class="checkout-form" action="#" method="post">
+                    <!-- Personal details fieldset -->
                     <fieldset>
                         <legend>Personal Details</legend>
 
@@ -135,6 +147,7 @@
                         <input type="tel" id="phone" name="phone" required>
                     </fieldset>
 
+                    <!-- Delivery address fieldset -->
                     <fieldset>
                         <legend>Delivery Address</legend>
 
@@ -152,10 +165,11 @@
                         <input type="text" id="postal-code" name="postal-code" required>
                     </fieldset>
 
+                    <!-- Delivery time selection fieldset -->
                     <fieldset>
                         <legend>Delivery Time</legend>
 
-                        <!-- Delivery time selection -->
+                        <!-- Delivery date and time selection -->
                         <label for="delivery-date">Delivery Date:</label>
                         <input type="date" id="delivery-date" name="delivery-date" required>
 
@@ -170,10 +184,11 @@
                         </select>
                     </fieldset>
 
+                    <!-- Payment method fieldset -->
                     <fieldset>
                         <legend>Payment Method</legend>
 
-                        <!-- Payment method selection -->
+                        <!-- Radio buttons for payment method selection -->
                         <label>Select Payment Method:</label><br>
                         <input type="radio" id="credit-card" name="payment-method" value="credit-card" checked>
                         <label for="credit-card">Credit Card</label><br>
@@ -187,7 +202,7 @@
                         <input type="radio" id="eft" name="payment-method" value="eft">
                         <label for="eft">EFT</label>
 
-                        <!-- Credit card details (shown by default) -->
+                        <!-- Credit card details (shown when credit card is selected) -->
                         <div id="credit-card-details" class="mt-1">
                             <label for="card-number">Card Number:</label>
                             <input type="text" id="card-number" name="card-number" placeholder="1234 5678 9012 3456">
@@ -203,23 +218,24 @@
                         </div>
                     </fieldset>
 
-                    <!-- Terms agreement -->
+                    <!-- Terms and conditions agreement -->
                     <div class="mb-2">
                         <input type="checkbox" id="terms" name="terms" required>
                         <label for="terms">I agree to the terms and conditions</label>
                     </div>
 
-                    <!-- Submit button -->
+                    <!-- Submit button to complete order -->
                     <button type="submit" class="checkout-button">Place Order</button>
                 </form>
             </section>
         </div>
     </main>
 
-    <!-- Footer with contact information and copyright -->
+    <!-- Footer: Consistent across all pages with contact info and links -->
     <footer>
         <div class="container">
             <div class="footer-content">
+                <!-- Company description and social media -->
                 <div class="footer-column">
                     <h3>Delight Home Bakery</h3>
                     <p>Fresh baked goods made with love since 2004. We specialize in artisanal bread, pastries, and
@@ -231,6 +247,7 @@
                     </div>
                 </div>
 
+                <!-- Quick navigation links -->
                 <div class="footer-column">
                     <h3>Quick Links</h3>
                     <ul class="footer-links">
@@ -242,6 +259,7 @@
                     </ul>
                 </div>
 
+                <!-- Contact information -->
                 <div class="footer-column">
                     <h3>Contact Info</h3>
                     <address>
@@ -254,6 +272,7 @@
                     <p>Email: <a href="mailto:orders@delighthomebakery.co.za">orders@delighthomebakery.co.za</a></p>
                 </div>
 
+                <!-- Business hours -->
                 <div class="footer-column">
                     <h3>Hours</h3>
                     <ul class="footer-links">
@@ -265,6 +284,7 @@
                 </div>
             </div>
 
+            <!-- Copyright information -->
             <div class="footer-bottom">
                 <p>&copy; 2025 Delight Home Bakery. All rights reserved.</p>
             </div>

@@ -2,16 +2,19 @@
 <html lang="en">
 
 <head>
+    <!-- Document setup  -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Products - Delight Home Bakery</title>
+    <!-- Linking external CSS file for styling -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <!-- Header section with navigation -->
+    <!-- Header section, which is consistent across all pages for navigation -->
     <header>
         <div class="header-container">
+            <!-- Logo and business name section -->
             <div class="logo-container">
                 <img src="_images/logo/logo (1).png" alt="Delight Home Bakery Logo">
                 <div class="logo-text">
@@ -20,10 +23,12 @@
                 </div>
             </div>
 
+            <!-- Main navigation menu -->
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
+                    <!-- Current page is not a link an active state -->
                     <li>Products</li>
                     <li><a href="enquiry.html">Order</a></li>
                     <li><a href="contact.html">Contact</a></li>
@@ -32,13 +37,15 @@
                 </ul>
             </nav>
 
+            <!-- Header actions, cart, theme toggle, mobile menu -->
             <div class="header-actions">
                 <div class="cart-icon">
                     🛒
                     <span class="cart-count">3</span>
                 </div>
                 <button class="theme-toggle">🌙 Dark Mode</button>
-                <div class="mobile-menu" onclick="toggleMenu()"> <!-- Ment for the hamburger menu, I cant use it as it uses JavaScript -->
+                <!-- Mobile hamburger menu (requires JavaScript) -->
+                <div class="mobile-menu" onclick="toggleMenu()">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -47,7 +54,7 @@
         </div>
     </header>
 
-    <!-- Page Banner -->
+    <!-- Page Banner  -->
     <section class="page-banner">
         <div class="page-banner-content">
             <h2>Our Bakery Menu</h2>
@@ -55,17 +62,18 @@
         </div>
     </section>
 
-    <!-- Main content of the products page -->
+    <!-- Main content area of the products page -->
     <main class="container">
-        <!-- Breads category -->
+        <!-- Breads category section -->
         <section class="category-section">
             <div class="section-title">
                 <h3>Artisan Breads</h3>
                 <p>Freshly baked daily using traditional methods</p>
             </div>
 
-            <!-- Bread product list -->
+            <!-- Bread product list using grid layout -->
             <ul class="menu-grid">
+                <!-- Individual product item with badge -->
                 <li class="menu-item">
                     <div class="item-badge badge-best-seller">Best Seller</div>
                     <img src="_images/product/bread/olive_ciabatta.jpg" alt="Artisan Olive Ciabatta">
@@ -77,6 +85,7 @@
                     </div>
                 </li>
 
+                <!-- Additional product items follow same structure -->
                 <li class="menu-item">
                     <div class="item-badge badge-popular">Popular</div>
                     <img src="_images/product/bread/sourdough.jpg" alt="Rustic Sourdough Bread">
@@ -132,7 +141,7 @@
             </ul>
         </section>
 
-        <!-- Pastries category -->
+        <!-- Pastries category section -->
         <br>
         <br>
         <section class="category-section">
@@ -141,7 +150,7 @@
                 <p>Flaky, buttery pastries made with real butter</p>
             </div>
 
-            <!-- Pastries product list -->
+            <!-- Pastries product list using grid layout -->
             <ul class="menu-grid">
                 <li class="menu-item">
                     <div class="item-badge badge-best-seller">Best Seller</div>
@@ -188,7 +197,7 @@
             </ul>
         </section>
 
-        <!-- Cakes category -->
+        <!-- Cakes category section -->
         <br>
         <br>
         <section class="category-section">
@@ -197,7 +206,7 @@
                 <p>Perfect for celebrations or everyday treats</p>
             </div>
 
-            <!-- Cakes product list -->
+            <!-- Cakes product list using grid layout -->
             <ul class="menu-grid">
                 <li class="menu-item">
                     <div class="item-badge badge-popular">Popular</div>
@@ -247,7 +256,7 @@
             </ul>
         </section>
 
-        <!-- Cookies category -->
+        <!-- Cookies category section -->
         <br>
         <br>
         <section class="category-section">
@@ -256,7 +265,7 @@
                 <p>Crispy cookies and traditional biscuits</p>
             </div>
 
-            <!-- Cookies product list -->
+            <!-- Cookies product list using grid layout -->
             <ul class="menu-grid">
                 <li class="menu-item">
                     <div class="item-badge badge-best-seller">Best Seller</div>
@@ -299,7 +308,7 @@
             </ul>
         </section>
 
-        <!-- Beverages category -->
+        <!-- Beverages category section -->
         <br>
         <br>
         <section class="category-section">
@@ -308,7 +317,7 @@
                 <p>Freshly brewed to complement our baked goods</p>
             </div>
 
-            <!-- Beverages product list -->
+            <!-- Beverages product list using grid layout -->
             <ul class="menu-grid">
                 <li class="menu-item">
                     <div class="item-badge badge-best-seller">Best Seller</div>
@@ -351,7 +360,7 @@
             </ul>
         </section>
 
-        <!-- Seasonal specials -->
+        <!-- Seasonal specials section -->
         <br>
         <br>
         <section class="category-section">
@@ -362,7 +371,7 @@
             <p>Current specials include pumpkin spice muffins and apple cider donuts.</p>
         </section>
 
-        <!-- Custom orders -->
+        <!-- Custom orders section with link to order page -->
         <section class="category-section">
             <div class="section-title">
                 <h3>Custom Orders</h3>
@@ -372,10 +381,11 @@
         </section>
     </main>
 
-    <!-- Footer with contact information and copyright -->
+    <!-- Footer: Consistent across all pages with contact info and links -->
     <footer>
         <div class="container">
             <div class="footer-content">
+                <!-- Company description and social media -->
                 <div class="footer-column">
                     <h3>Delight Home Bakery</h3>
                     <p>Fresh baked goods made with love since 2004. We specialize in artisanal bread, pastries, and
@@ -387,17 +397,20 @@
                     </div>
                 </div>
 
+                <!-- Quick navigation links -->
                 <div class="footer-column">
                     <h3>Quick Links</h3>
                     <ul class="footer-links">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About Us</a></li>
+                        <!-- Current page is not a link (active state) -->
                         <li>Products</li>
                         <li><a href="enquiry.html">Place Order</a></li>
                         <li><a href="contact.html">Contact Us</a></li>
                     </ul>
                 </div>
 
+                <!-- Contact information -->
                 <div class="footer-column">
                     <h3>Contact Info</h3>
                     <address>
@@ -410,6 +423,7 @@
                     <p>Email: <a href="mailto:orders@delighthomebakery.co.za">orders@delighthomebakery.co.za</a></p>
                 </div>
 
+                <!-- Business hours -->
                 <div class="footer-column">
                     <h3>Hours</h3>
                     <ul class="footer-links">
@@ -421,6 +435,7 @@
                 </div>
             </div>
 
+            <!-- Copyright information -->
             <div class="footer-bottom">
                 <p>&copy; 2025 Delight Home Bakery. All rights reserved.</p>
             </div>

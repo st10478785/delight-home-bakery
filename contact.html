@@ -2,16 +2,19 @@
 <html lang="en">
 
 <head>
+    <!-- Document setup -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - Delight Home Bakery</title>
+    <!-- Linking external CSS file for styling -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <!-- Header section with navigation -->
+    <!-- Header section, which is consistent across all pages for navigation -->
     <header>
         <div class="header-container">
+            <!-- Logo and business name section -->
             <div class="logo-container">
                 <img src="_images/logo/logo (1).png" alt="Delight Home Bakery Logo">
                 <div class="logo-text">
@@ -20,25 +23,29 @@
                 </div>
             </div>
 
+            <!-- Main navigation menu -->
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="products.html">Products</a></li>
                     <li><a href="enquiry.html">Order</a></li>
+                    <!-- Current page is not a link an active state -->
                     <li>Contact</li>
                     <li><a href="checkout.html">Checkout</a></li>
                     <li><a href="profile.html">Profile</a></li>
                 </ul>
             </nav>
 
+            <!-- Header actions, cart, theme toggle, mobile menu -->
             <div class="header-actions">
                 <div class="cart-icon">
                     🛒
                     <span class="cart-count">3</span>
                 </div>
                 <button class="theme-toggle">🌙 Dark Mode</button>
-                <div class="mobile-menu" onclick="toggleMenu()"> <!-- Ment for the hamburger menu, I cant use it as it uses JavaScript -->
+                <!-- Mobile hamburger menu (requires JavaScript) -->
+                <div class="mobile-menu" onclick="toggleMenu()">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -47,7 +54,7 @@
         </div>
     </header>
 
-    <!-- Page Banner -->
+    <!-- Page Banner  -->
     <section class="page-banner">
         <div class="page-banner-content">
             <h2>Contact Delight Home Bakery</h2>
@@ -55,12 +62,14 @@
         </div>
     </section>
 
-    <!-- Main content of the contact page -->
+    <!-- Main content area of the contact page -->
     <main class="container">
+        <!-- Contact information displayed in two columns -->
         <div class="contact-info">
-            <!-- Contact information section -->
+            <!-- Physical address section -->
             <section class="contact-section">
                 <h3>Visit Our Bakery</h3>
+                <!-- Address element for semantic markup -->
                 <address>
                     <strong>Delight Home Bakery</strong><br>
                     123 Baker Street<br>
@@ -70,7 +79,7 @@
                 </address>
             </section>
 
-            <!-- Contact details -->
+            <!-- Contact details section -->
             <section class="contact-section">
                 <h3>Contact Information</h3>
                 <p>Phone: <a href="tel:+27111234567">+27 11 123 4567</a></p>
@@ -78,9 +87,10 @@
             </section>
         </div>
 
-        <!-- Hours of operation -->
+        <!-- Hours of operation in table format -->
         <section class="contact-section">
             <h3>Hours of Operation</h3>
+            <!-- Table for structured business hours data -->
             <table>
                 <tr>
                     <th>Day</th>
@@ -105,25 +115,28 @@
             </table>
         </section>
 
-        <!-- Location information -->
+        <!-- Location information with embedded map -->
         <section class="contact-section">
             <h3>Find Us</h3>
             <p>We're located in the Ruimsig Plaza, next to the Checkers supermarket. Ample parking available.</p>
             <p>Look for the building with the giant pretzel on the roof!</p>
 
             <h4>Find Us On The Map</h4>
+            <!-- Container for embedded Google Maps -->
             <div class="map-container">
+                <!-- iframe: Embeds external map content within the page -->
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3171.8833407840334!2d28.04730594967848!3d-26.08720683528215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e95740d4d9a9d99%3A0x3fbe7c204f3a2fa0!2sRuimsig%2C%20Roodepoort%2C%20South%20Africa!5e0!3m2!1sen!2sus!4v1619544180420!5m2!1sen!2sus"
                     width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade">
-                </iframe> <!-- Split up iframe-->
+                </iframe>
             </div>
         </section>
 
-        <!-- Contact form -->
+        <!-- Contact form for sending messages -->
         <section class="contact-section">
             <h3>Send Us a Message</h3>
+            <!-- Form for user to send messages to the bakery -->
             <form class="contact-form" action="#" method="post">
                 <!-- Name field -->
                 <label for="contact-name">Your Name:</label>
@@ -137,7 +150,7 @@
                 <label for="contact-subject">Subject:</label>
                 <input type="text" id="contact-subject" name="contact-subject" required>
 
-                <!-- Message field -->
+                <!-- Message textarea for longer text input -->
                 <label for="contact-message">Message:</label>
                 <textarea id="contact-message" name="contact-message" rows="5" required></textarea>
 
@@ -146,7 +159,7 @@
             </form>
         </section>
 
-        <!-- Social media links -->
+        <!-- Social media links section -->
         <section class="contact-section">
             <h3>Follow Us</h3>
             <p>Stay updated with our daily specials and new products:</p>
@@ -159,31 +172,28 @@
             </div>
         </section>
 
-        <!-- FAQ section -->
+        <!-- FAQ section: Frequently Asked Questions -->
         <section class="contact-section">
             <h3>Frequently Asked Questions</h3>
 
-            <!-- First FAQ -->
+            <!-- Individual FAQ items -->
             <article>
                 <h4>Do you deliver?</h4>
                 <p>Yes, we deliver to most areas in Johannesburg. See our delivery areas on the <a
                         href="enquiry.html">Order page</a>.</p>
             </article>
 
-            <!-- Second FAQ -->
             <article>
                 <h4>Do you make gluten-free products?</h4>
                 <p>Yes, we have a selection of gluten-free baked goods. Please ask about our daily options.</p>
             </article>
 
-            <!-- Third FAQ -->
             <article>
                 <h4>Can I place a large order for an event?</h4>
                 <p>Absolutely! We cater events of all sizes. Please place orders at least 48 hours in advance for large
                     orders.</p>
             </article>
 
-            <!-- Fourth FAQ -->
             <article>
                 <h4>Do you have parking?</h4>
                 <p>Yes, we have ample parking behind our bakery building.</p>
@@ -191,10 +201,11 @@
         </section>
     </main>
 
-    <!-- Footer with contact information and copyright -->
+    <!-- Footer: Consistent across all pages with contact info and links -->
     <footer>
         <div class="container">
             <div class="footer-content">
+                <!-- Company description and social media -->
                 <div class="footer-column">
                     <h3>Delight Home Bakery</h3>
                     <p>Fresh baked goods made with love since 2004. We specialize in artisanal bread, pastries, and
@@ -206,6 +217,7 @@
                     </div>
                 </div>
 
+                <!-- Quick navigation links -->
                 <div class="footer-column">
                     <h3>Quick Links</h3>
                     <ul class="footer-links">
@@ -213,10 +225,12 @@
                         <li><a href="about.html">About Us</a></li>
                         <li><a href="products.html">Our Products</a></li>
                         <li><a href="enquiry.html">Place Order</a></li>
+                        <!-- Current page is not a link (active state) -->
                         <li>Contact Us</li>
                     </ul>
                 </div>
 
+                <!-- Contact information -->
                 <div class="footer-column">
                     <h3>Contact Info</h3>
                     <address>
@@ -229,6 +243,7 @@
                     <p>Email: <a href="mailto:orders@delighthomebakery.co.za">orders@delighthomebakery.co.za</a></p>
                 </div>
 
+                <!-- Business hours -->
                 <div class="footer-column">
                     <h3>Hours</h3>
                     <ul class="footer-links">
@@ -240,6 +255,7 @@
                 </div>
             </div>
 
+            <!-- Copyright information -->
             <div class="footer-bottom">
                 <p>&copy; 2025 Delight Home Bakery. All rights reserved.</p>
             </div>

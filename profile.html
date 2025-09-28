@@ -2,16 +2,19 @@
 <html lang="en">
 
 <head>
+    <!-- Document setup  -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Profile - Delight Home Bakery</title>
+    <!-- Linking external CSS file for styling -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <!-- Header section with navigation -->
+    <!-- Header section, which is consistent across all pages for navigation -->
     <header>
         <div class="header-container">
+            <!-- Logo and business name section -->
             <div class="logo-container">
                 <img src="_images/logo/logo (1).png" alt="Delight Home Bakery Logo">
                 <div class="logo-text">
@@ -20,6 +23,7 @@
                 </div>
             </div>
 
+            <!-- Main navigation menu -->
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -28,17 +32,20 @@
                     <li><a href="enquiry.html">Order</a></li>
                     <li><a href="contact.html">Contact</a></li>
                     <li><a href="checkout.html">Checkout</a></li>
+                    <!-- Current page is not a link an active state -->
                     <li>Profile</li>
                 </ul>
             </nav>
 
+            <!-- Header actions, cart, theme toggle, mobile menu -->
             <div class="header-actions">
                 <div class="cart-icon">
                     🛒
                     <span class="cart-count">3</span>
                 </div>
                 <button class="theme-toggle">🌙 Dark Mode</button>
-                <div class="mobile-menu" onclick="toggleMenu()"> <!-- Ment for the hamburger menu, I cant use it as it uses JavaScript -->
+                <!-- Mobile hamburger menu (requires JavaScript) -->
+                <div class="mobile-menu" onclick="toggleMenu()">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -47,7 +54,7 @@
         </div>
     </header>
 
-    <!-- Page Banner -->
+    <!-- Page Banner  -->
     <section class="page-banner">
         <div class="page-banner-content">
             <h2>My Profile</h2>
@@ -55,9 +62,9 @@
         </div>
     </section>
 
-    <!-- Main content of the profile page -->
+    <!-- Main content area of the profile page -->
     <main class="container">
-        <!-- Profile overview section -->
+        <!-- Profile overview section: User account summary -->
         <section class="profile-section">
             <h3>Account Overview</h3>
             <div class="feature">
@@ -69,39 +76,41 @@
             </div>
         </section>
 
-        <!-- Personal information section -->
+        <!-- Personal information section: Editable user details -->
         <section class="profile-section">
             <h3>Personal Information</h3>
+            <!-- Form for updating user information -->
             <form class="profile-form" action="#" method="post">
+                <!-- Fieldset groups related form elements together -->
                 <fieldset>
                     <legend>Update Your Details</legend>
 
-                    <!-- Name fields -->
+                    <!-- Name fields with pre-filled values -->
                     <label for="first-name">First Name:</label>
                     <input type="text" id="first-name" name="first-name" value="Vishay" required>
 
                     <label for="last-name">Last Name:</label>
                     <input type="text" id="last-name" name="last-name" value="Gosai" required>
 
-                    <!-- Contact fields -->
+                    <!-- Contact fields with pre-filled values -->
                     <label for="email">Email Address:</label>
                     <input type="email" id="email" name="email" value="VishayG@example.com" required>
 
                     <label for="phone">Phone Number:</label>
                     <input type="tel" id="phone" name="phone" value="+27 11 123 4567" required>
 
-                    <!-- Save button -->
+                    <!-- Save button to submit form -->
                     <button type="submit">Save Changes</button>
                 </fieldset>
             </form>
         </section>
 
-        <!-- Address book section -->
+        <!-- Address book section: Saved delivery addresses -->
         <section class="profile-section">
             <h3>Saved Addresses</h3>
 
             <div class="features">
-                <!-- Primary address -->
+                <!-- Primary address display -->
                 <article class="feature">
                     <h4>Primary Address</h4>
                     <p>123 Main Street</p>
@@ -127,10 +136,12 @@
             <button class="add-to-cart mt-2">Add New Address</button>
         </section>
 
-        <!-- Order history section -->
+        <!-- Order history section: Table of previous orders -->
         <section class="profile-section">
             <h3>Order History</h3>
+            <!-- Table element for structured data display -->
             <table>
+                <!-- Table header row -->
                 <thead>
                     <tr>
                         <th>Order #</th>
@@ -141,6 +152,7 @@
                         <th>Action</th>
                     </tr>
                 </thead>
+                <!-- Table body with order data -->
                 <tbody>
                     <tr>
                         <td>JHB-0042</td>
@@ -178,39 +190,39 @@
             </table>
         </section>
 
-        <!-- Preferences section -->
+        <!-- Preferences section: User communication settings -->
         <section class="profile-section">
             <h3>Preferences</h3>
+            <!-- Form for communication preferences -->
             <form class="preferences-form" action="#" method="post">
                 <fieldset>
                     <legend>Communication Preferences</legend>
 
-                    <!-- Newsletter subscription -->
+                    <!-- Checkbox inputs for various preferences -->
                     <input type="checkbox" id="newsletter" name="newsletter" checked>
                     <label for="newsletter">Subscribe to newsletter</label>
                     <br><br>
 
-                    <!-- Special offers -->
                     <input type="checkbox" id="offers" name="offers" checked>
                     <label for="offers">Receive special offers</label>
                     <br><br>
 
-                    <!-- SMS notifications -->
                     <input type="checkbox" id="sms" name="sms">
                     <label for="sms">SMS order updates</label>
                     <br><br>
 
-                    <!-- Save button -->
+                    <!-- Save button to submit preferences -->
                     <button type="submit">Save Preferences</button>
                 </fieldset>
             </form>
         </section>
     </main>
 
-    <!-- Footer with contact information and copyright -->
+    <!-- Footer: Consistent across all pages with contact info and links -->
     <footer>
         <div class="container">
             <div class="footer-content">
+                <!-- Company description and social media -->
                 <div class="footer-column">
                     <h3>Delight Home Bakery</h3>
                     <p>Fresh baked goods made with love since 2004. We specialize in artisanal bread, pastries, and
@@ -222,6 +234,7 @@
                     </div>
                 </div>
 
+                <!-- Quick navigation links -->
                 <div class="footer-column">
                     <h3>Quick Links</h3>
                     <ul class="footer-links">
@@ -233,6 +246,7 @@
                     </ul>
                 </div>
 
+                <!-- Contact information -->
                 <div class="footer-column">
                     <h3>Contact Info</h3>
                     <address>
@@ -245,6 +259,7 @@
                     <p>Email: <a href="mailto:orders@delighthomebakery.co.za">orders@delighthomebakery.co.za</a></p>
                 </div>
 
+                <!-- Business hours -->
                 <div class="footer-column">
                     <h3>Hours</h3>
                     <ul class="footer-links">
@@ -256,6 +271,7 @@
                 </div>
             </div>
 
+            <!-- Copyright information -->
             <div class="footer-bottom">
                 <p>&copy; 2025 Delight Home Bakery. All rights reserved.</p>
             </div>
