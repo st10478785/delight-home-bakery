@@ -3,10 +3,15 @@
 ## Student Information
 
 **Student Name**: Vishay Gosai
+
 **Student ID**: ST10478785
+
 **Course**: WEDE5020 - Web Development
+
 **Group**: 1
+
 **Submission Date**: 27 August 2025 (Part 1); 29 September 2025 (Part 2)
+
 **GitHub Repository**: [st10478785/delight-home-bakery](https://github.com/st10478785/delight-home-bakery)
 
 ## Project Overview
@@ -57,7 +62,7 @@ Delight Home Bakery is a local artisanal bakery established in 2004, specializin
 
 ### Visual Design
 
-- **High-Quality Imagery** - Professional product photography mainly from and unsplash
+- **High Quality Imagery** - Professional product photography mainly from and unsplash
 - **Interactive Elements** - Smooth transitions and hover effects ( learnt from Youtube and W3Schools)
 - **Visual Product Display** - Always visible badges and clear pricing
 - **Professional Layout** - Clean, modern design with appropriate spacing and colour scheme
@@ -196,36 +201,55 @@ Delight Home Bakery is a local artisanal bakery established in 2004, specializin
 ### File Structure
 
 delight_home_bakery/
-│
+
 ├── index.html              # Home page
+
 ├── about.html              # About us page
+
 ├── products.html           # Products catalog
+
 ├── enquiry.html            # Order form page
+
 ├── contact.html            # Contact information
+
 ├── checkout.html           # Checkout process
+
 ├── profile.html            # User profile
-│
+
 ├── style.css               # Main stylesheet
-│
+
 ├── script.js               # JavaScript functionality
-│
+
 ├── _images/
+
 │   ├── logo/               # Brand assets
+
 │   ├── home/               # Homepage images
+
 │   ├── about/              # About page images
+
 │   ├── product/            # Product categories
+
 │   │   ├── bread/
+
 │   │   ├── pastries/
+
 │   │   ├── cakes/
+
 │   │   ├── cookies/
+
 │   │   └── beverages/
+
 │   ├── testimonials/       # Customer photos
+
 │   └── unused/             # Additional assets
-│
+
 ├── _private/
+
 │   ├── text/                 # File containing text
+
 │   │   ├── description.txt/  # Detailed description of project
-│
+
 └── README.md               # Project documentation
 
 ## Development Timeline
@@ -291,10 +315,10 @@ delight_home_bakery/
 
 #### Cross Browser Compatibility
 
-- **Chrome** Works on Chrome on desktop, no matter what size
-- **Firefox** Works on Firefox on desktop, no matter what size
-- **Safari** Works on Safari on mt Ipad, no matter what size
-- **Edge** Works on Edge on desktop, no matter what size
+- **Chrome**: Works on Chrome on desktop, no matter what size
+- **Firefox**: Works on Firefox on desktop, no matter what size
+- **Safari**: Works on Safari on mt Ipad, no matter what size
+- **Edge**: Works on Edge on desktop, no matter what size
 
 #### Device Testing Matrix
 
@@ -305,31 +329,52 @@ delight_home_bakery/
 ## Screenshots for different screen sizes
 
 ### Desktop
-[Desktop](<_images/screenshots/Desktop/Desktop_Index.jpeg>)
-[Desktop](<_images/screenshots/Desktop/Desktop_About.jpeg>)
-[Desktop](<_images/screenshots/Desktop/Desktop_Products.jpeg>)
-[Desktop](<_images/screenshots/Desktop/Desktop_Enquiry.jpeg>)
-[Desktop](<_images/screenshots/Desktop/Desktop_Contact.jpeg>)
-[Desktop](<_images/screenshots/Desktop/Desktop_Checkout.jpeg>)
-[Desktop](<_images/screenshots/Desktop/Desktop_Profile.jpeg>)
+
+[Desktop: Index Page](<_images/screenshots/Desktop/Desktop_Index.jpeg>)
+
+[Desktop: About Page](<_images/screenshots/Desktop/Desktop_About.jpeg>)
+
+[Desktop: Products Page](<_images/screenshots/Desktop/Desktop_Products.jpeg>)
+
+[Desktop: Enquiry Page](<_images/screenshots/Desktop/Desktop_Enquiry.jpeg>)
+
+[Desktop: Contact Page](<_images/screenshots/Desktop/Desktop_Contact.jpeg>)
+
+[Desktop: Checkout Page](<_images/screenshots/Desktop/Desktop_Checkout.jpeg>)
+
+[Desktop: Profile Page](<_images/screenshots/Desktop/Desktop_Profile.jpeg>)
 
 ### Tablet
-[Tablet](<_images/screenshots/Tablet/Tablet_Index.jpeg>)
-[Tablet](<_images/screenshots/Tablet/Tablet_About.jpeg>)
-[Tablet](<_images/screenshots/Tablet/Tablet_Products.jpeg>)
-[Tablet](<_images/screenshots/Tablet/Tablet_Enquiry.jpeg>)
-[Tablet](<_images/screenshots/Tablet/Tablet_Contact.jpeg>)
-[Tablet](<_images/screenshots/Tablet/Tablet_Checkout.jpeg>)
-[Tablet](<_images/screenshots/Tablet/Tablet_Profile.jpeg>)
+
+[Tablet: Index Page](<_images/screenshots/Tablet/Tablet_Index.jpeg>)
+
+[Tablet: About Page](<_images/screenshots/Tablet/Tablet_About.jpeg>)
+
+[Tablet: Products Page](<_images/screenshots/Tablet/Tablet_Products.jpeg>)
+
+[Tablet: Enquiry Page](<_images/screenshots/Tablet/Tablet_Enquiry.jpeg>)
+
+[Tablet: Contact Page](<_images/screenshots/Tablet/Tablet_Contact.jpeg>)
+
+[Tablet: Checkout Page](<_images/screenshots/Tablet/Tablet_Checkout.jpeg>)
+
+[Tablet: Profile Page](<_images/screenshots/Tablet/Tablet_Profile.jpeg>)
 
 ### Phone
-[Phone](<_images/screenshots/Phone/Phone_Index.jpeg>)
-[Phone](<_images/screenshots/Phone/Phone_About.jpeg>)
-[Phone](<_images/screenshots/Phone/Phone_Products.jpeg>)
-[Phone](<_images/screenshots/Phone/Phone_Enquiry.jpeg>)
-[Phone](<_images/screenshots/Phone/Phone_Contact.jpeg>)
-[Phone](<_images/screenshots/Phone/Phone_Checkout.jpeg>)
-[Phone](<_images/screenshots/Phone/Phone_Profile.jpeg>)
+
+[Phone: Index Page](<_images/screenshots/Phone/Phone_Index.jpeg>)
+
+[Phone: About Page](<_images/screenshots/Phone/Phone_About.jpeg>)
+
+[Phone: Products Page](<_images/screenshots/Phone/Phone_Products.jpeg>)
+
+[Phone: Enquiry Page](<_images/screenshots/Phone/Phone_Enquiry.jpeg>)
+
+[Phone: Contact Page](<_images/screenshots/Phone/Phone_Contact.jpeg>)
+
+[Phone: Checkout Page](<_images/screenshots/Phone/Phone_Checkout.jpeg>)
+
+[Phone: Profile Page](<_images/screenshots/Phone/Phone_Profile.jpeg>)
 
 ## Changelog ( Learned from YouTube )
 
@@ -377,14 +422,21 @@ delight_home_bakery/
 #### Documentation
 
 I added more informaton my document
+
 I did improvements from my feedback in a differnt colour
+
 I added more References
 
-CSS for Desktop
+**CSS for Desktop**
+
 I used a separate style.css file and linked it to all my pages.
+
 A CSS reset that makes sure everything looks the same across browsers.
+
 I set up font sizes for headings and body text, and used nice fonts for a clear look.
+
 Layouts are built with Grid (for sections) and Flexbox (for alignment).
+
 Buttons and inputs have hover and focus effects for better interaction.
 
 ## References
