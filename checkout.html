@@ -2,12 +2,15 @@
 <html lang="en">
 
 <head>
-    <!-- Document setup  -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Checkout - Delight Home Bakery</title>
-    <!-- Linking external CSS file for styling -->
+    <title>Checkout - Delight Home Bakery | Secure Online Payment</title>
+    <meta name="description"
+        content="Complete your order with Delight Home Bakery. Secure checkout with multiple payment options.">
+    <meta name="keywords" content="bakery checkout, online payment, secure checkout, delivery, order confirmation">
+    <meta name="author" content="Delight Home Bakery">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -16,7 +19,7 @@
         <div class="header-container">
             <!-- Logo and business name section -->
             <div class="logo-container">
-                <img src="_images/logo/logo (1).png" alt="Delight Home Bakery Logo">
+                <img src="_images/logo/logo (1).png" alt="Delight Home Bakery Logo - Artisan Bakery Since 2004">
                 <div class="logo-text">
                     <h1>Delight Home Bakery</h1>
                     <span>Since 2004</span>
@@ -24,7 +27,7 @@
             </div>
 
             <!-- Main navigation menu -->
-            <nav>
+            <nav id="main-nav">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
@@ -41,11 +44,11 @@
             <div class="header-actions">
                 <div class="cart-icon">
                     🛒
-                    <span class="cart-count">3</span>
+                    <span class="cart-count">0</span>
                 </div>
-                <button class="theme-toggle">🌙 Dark Mode</button>
-                <!-- Mobile hamburger menu (requires JavaScript) -->
-                <div class="mobile-menu" onclick="toggleMenu()">
+                <button class="theme-toggle" id="theme-toggle">🌙 Dark Mode</button>
+                <!-- Mobile hamburger menu -->
+                <div class="mobile-menu" id="mobile-menu-toggle">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -54,7 +57,7 @@
         </div>
     </header>
 
-    <!-- Page Banner  -->
+    <!-- Page Banner -->
     <section class="page-banner">
         <div class="page-banner-content">
             <h2>Checkout</h2>
@@ -64,167 +67,106 @@
 
     <!-- Main content area of the checkout page -->
     <main class="container">
-        <div class="checkout-container">
-            <!-- Order summary section: Shows items in cart with pricing -->
-            <section>
-                <h3>Your Order</h3>
-                <!-- Table for displaying order details -->
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Item</th>
-                            <th>Quantity</th>
-                            <th>Price</th>
-                            <th>Total</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Rustic Sourdough Loaf</td>
-                            <td>1</td>
-                            <td>R45</td>
-                            <td>R45</td>
-                        </tr>
-                        <tr>
-                            <td>Almond Croissant</td>
-                            <td>2</td>
-                            <td>R28</td>
-                            <td>R56</td>
-                        </tr>
-                        <tr>
-                            <td>Double Chocolate Muffin</td>
-                            <td>3</td>
-                            <td>R22</td>
-                            <td>R66</td>
-                        </tr>
-                    </tbody>
-                    <!-- Table footer for summary calculations -->
-                    <tfoot>
-                        <tr>
-                            <td colspan="3">Subtotal</td>
-                            <td>R167</td>
-                        </tr>
-                        <tr>
-                            <td colspan="3">Delivery Fee</td>
-                            <td>R35</td>
-                        </tr>
-                        <tr>
-                            <td colspan="3"><strong>Total</strong></td>
-                            <td><strong>R202</strong></td>
-                        </tr>
-                    </tfoot>
-                </table>
+        <!-- Checkout progress indicator -->
+        <div class="checkout-steps">
+            <div class="checkout-step active">
+                <div class="step-number">1</div>
+                <div class="step-label">Cart</div>
+            </div>
+            <div class="checkout-step active">
+                <div class="step-number">2</div>
+                <div class="step-label">Information</div>
+            </div>
+            <div class="checkout-step">
+                <div class="step-number">3</div>
+                <div class="step-label">Payment</div>
+            </div>
+            <div class="checkout-step">
+                <div class="step-number">4</div>
+                <div class="step-label">Confirmation</div>
+            </div>
+        </div>
 
-                <!-- Delivery information display -->
-                <div class="mt-2">
-                    <h4>Delivery Information</h4>
-                    <p><strong>Estimated Delivery:</strong> Today, 3:00 PM - 5:00 PM</p>
-                    <p><strong>Delivery Address:</strong> 123 Main Street, Ruimsig, Roodepoort</p>
+        <div class="checkout-container">
+            <!-- Order summary section -->
+            <section class="checkout-summary">
+                <div class="order-summary">
+                    <h3>Your Order</h3>
+                    <div id="checkout-empty" class="empty-state">
+                        <p>Your cart is empty</p>
+                        <a href="products.html" class="cta-button">Browse Products</a>
+                    </div>
+                    <table id="checkout-items">
+                        <!-- Order items will be populated by JavaScript -->
+                    </table>
+                    <div class="summary-total">
+                        <span>Total:</span>
+                        <span id="checkout-total">R0.00</span>
+                    </div>
                 </div>
             </section>
 
-            <!-- Customer information form: Collects shipping and payment details -->
-            <section>
-                <h3>Customer Information</h3>
-                <!-- Comprehensive checkout form -->
-                <form class="checkout-form" action="#" method="post">
-                    <!-- Personal details fieldset -->
+            <!-- Customer information form -->
+            <section class="checkout-form-section">
+                <form class="checkout-form" id="checkout-form">
                     <fieldset>
-                        <legend>Personal Details</legend>
-
-                        <!-- Name fields -->
-                        <label for="first-name">First Name:</label>
-                        <input type="text" id="first-name" name="first-name" required>
-
-                        <label for="last-name">Last Name:</label>
-                        <input type="text" id="last-name" name="last-name" required>
-
-                        <!-- Contact fields -->
-                        <label for="email">Email Address:</label>
-                        <input type="email" id="email" name="email" required>
-
-                        <label for="phone">Phone Number:</label>
-                        <input type="tel" id="phone" name="phone" required>
-                    </fieldset>
-
-                    <!-- Delivery address fieldset -->
-                    <fieldset>
-                        <legend>Delivery Address</legend>
-
-                        <!-- Address fields -->
-                        <label for="street">Street Address:</label>
-                        <input type="text" id="street" name="street" required>
-
-                        <label for="suburb">Suburb:</label>
-                        <input type="text" id="suburb" name="suburb" required>
-
-                        <label for="city">City:</label>
-                        <input type="text" id="city" name="city" value="Roodepoort" required>
-
-                        <label for="postal-code">Postal Code:</label>
-                        <input type="text" id="postal-code" name="postal-code" required>
-                    </fieldset>
-
-                    <!-- Delivery time selection fieldset -->
-                    <fieldset>
-                        <legend>Delivery Time</legend>
-
-                        <!-- Delivery date and time selection -->
-                        <label for="delivery-date">Delivery Date:</label>
-                        <input type="date" id="delivery-date" name="delivery-date" required>
-
-                        <label for="delivery-time">Preferred Time:</label>
-                        <select id="delivery-time" name="delivery-time" required>
-                            <option value="">Select a time slot</option>
-                            <option value="9-11">9:00 AM - 11:00 AM</option>
-                            <option value="11-1">11:00 AM - 1:00 PM</option>
-                            <option value="1-3">1:00 PM - 3:00 PM</option>
-                            <option value="3-5">3:00 PM - 5:00 PM</option>
-                            <option value="5-7">5:00 PM - 7:00 PM</option>
-                        </select>
-                    </fieldset>
-
-                    <!-- Payment method fieldset -->
-                    <fieldset>
-                        <legend>Payment Method</legend>
-
-                        <!-- Radio buttons for payment method selection -->
-                        <label>Select Payment Method:</label><br>
-                        <input type="radio" id="credit-card" name="payment-method" value="credit-card" checked>
-                        <label for="credit-card">Credit Card</label><br>
-
-                        <input type="radio" id="cash" name="payment-method" value="cash">
-                        <label for="cash">Cash on Delivery</label><br>
-
-                        <input type="radio" id="crypto" name="payment-method" value="crypto">
-                        <label for="crypto">Crypto</label><br>
-
-                        <input type="radio" id="eft" name="payment-method" value="eft">
-                        <label for="eft">EFT</label>
-
-                        <!-- Credit card details (shown when credit card is selected) -->
-                        <div id="credit-card-details" class="mt-1">
-                            <label for="card-number">Card Number:</label>
-                            <input type="text" id="card-number" name="card-number" placeholder="1234 5678 9012 3456">
-
-                            <label for="expiry-date">Expiry Date:</label>
-                            <input type="text" id="expiry-date" name="expiry-date" placeholder="MM/YY">
-
-                            <label for="cvv">CVV:</label>
-                            <input type="text" id="cvv" name="cvv" placeholder="123">
-
-                            <label for="card-name">Name on Card:</label>
-                            <input type="text" id="card-name" name="card-name" placeholder="Vishay Gosai">
+                        <legend>Contact Information</legend>
+                        <div class="form-group">
+                            <label for="checkout-email">Email Address *</label>
+                            <input type="email" id="checkout-email" name="checkout-email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="checkout-phone">Phone Number *</label>
+                            <input type="tel" id="checkout-phone" name="checkout-phone" required>
                         </div>
                     </fieldset>
 
-                    <!-- Terms and conditions agreement -->
-                    <div class="mb-2">
-                        <input type="checkbox" id="terms" name="terms" required>
-                        <label for="terms">I agree to the terms and conditions</label>
-                    </div>
+                    <fieldset>
+                        <legend>Shipping Information</legend>
+                        <div class="form-group">
+                            <label for="first-name">First Name *</label>
+                            <input type="text" id="first-name" name="first-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="last-name">Last Name *</label>
+                            <input type="text" id="last-name" name="last-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="street">Street Address *</label>
+                            <input type="text" id="street" name="street" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="city">City *</label>
+                            <input type="text" id="city" name="city" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="postal-code">Postal Code *</label>
+                            <input type="text" id="postal-code" name="postal-code" required>
+                        </div>
+                    </fieldset>
 
-                    <!-- Submit button to complete order -->
+                    <fieldset>
+                        <legend>Payment Method</legend>
+                        <div class="form-group">
+                            <label>
+                                <input type="radio" name="payment-method" value="credit-card" checked>
+                                Credit/Debit Card
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label>
+                                <input type="radio" name="payment-method" value="cash">
+                                Cash on Delivery
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label>
+                                <input type="radio" name="payment-method" value="eft">
+                                Bank Transfer (EFT)
+                            </label>
+                        </div>
+                    </fieldset>
+
                     <button type="submit" class="checkout-button">Place Order</button>
                 </form>
             </section>
