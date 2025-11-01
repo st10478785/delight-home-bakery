@@ -5,9 +5,19 @@
     <!-- Document setup -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Delight Home Bakery</title>
+    <title>Contact Us - Delight Home Bakery | Get in Touch</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Contact Delight Home Bakery in Johannesburg. Visit our store, call us, or send a message. We're here to answer your questions about our artisanal baked goods.">
+    <meta name="keywords"
+        content="contact Delight Home Bakery, Johannesburg bakery, store location, phone number, email, contact form, business hours">
+    <meta name="author" content="Delight Home Bakery">
     <!-- Linking external CSS file for styling -->
     <link rel="stylesheet" href="style.css">
+    <!-- Linking JavaScript file -->
+    <script src="script.js" defer></script>
+    <!-- Leaflet CSS for map -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 </head>
 
 <body>
@@ -16,7 +26,7 @@
         <div class="header-container">
             <!-- Logo and business name section -->
             <div class="logo-container">
-                <img src="_images/logo/logo (1).png" alt="Delight Home Bakery Logo">
+                <img src="_images/logo/logo (1).png" alt="Delight Home Bakery Logo - Artisan Bakery Since 2004">
                 <div class="logo-text">
                     <h1>Delight Home Bakery</h1>
                     <span>Since 2004</span>
@@ -24,7 +34,7 @@
             </div>
 
             <!-- Main navigation menu -->
-            <nav>
+            <nav id="main-nav">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
@@ -44,8 +54,8 @@
                     <span class="cart-count">3</span>
                 </div>
                 <button class="theme-toggle">🌙 Dark Mode</button>
-                <!-- Mobile hamburger menu (requires JavaScript) -->
-                <div class="mobile-menu" onclick="toggleMenu()">
+                <!-- Mobile hamburger menu -->
+                <div class="mobile-menu" id="mobile-menu-toggle">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -57,147 +67,175 @@
     <!-- Page Banner  -->
     <section class="page-banner">
         <div class="page-banner-content">
-            <h2>Contact Delight Home Bakery</h2>
-            <p>We'd love to hear from you! Reach out with questions, comments, or orders.</p>
+            <h2>Contact Us</h2>
+            <p>We'd love to hear from you</p>
         </div>
     </section>
 
     <!-- Main content area of the contact page -->
     <main class="container">
-        <!-- Contact information displayed in two columns -->
-        <div class="contact-info">
-            <!-- Physical address section -->
-            <section class="contact-section">
-                <h3>Visit Our Bakery</h3>
-                <!-- Address element for semantic markup -->
-                <address>
-                    <strong>Delight Home Bakery</strong><br>
-                    123 Baker Street<br>
-                    Ruimsig, Roodepoort<br>
-                    Johannesburg, 1724<br>
-                    South Africa
-                </address>
-            </section>
+        <!-- Contact information and map section -->
+        <section class="contact-info-section">
+            <div class="contact-grid">
+                <!-- Contact details -->
+                <div class="contact-details">
+                    <h3>Get in Touch</h3>
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div class="contact-text">
+                            <h4>Visit Us</h4>
+                            <address>
+                                123 Baker Street<br>
+                                Ruimsig, Roodepoort<br>
+                                Johannesburg, 1724<br>
+                                South Africa
+                            </address>
+                        </div>
+                    </div>
 
-            <!-- Contact details section -->
-            <section class="contact-section">
-                <h3>Contact Information</h3>
-                <p>Phone: <a href="tel:+27111234567">+27 11 123 4567</a></p>
-                <p>Email: <a href="mailto:orders@delighthomebakery.co.za">orders@delighthomebakery.co.za</a></p>
-            </section>
-        </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <div class="contact-text">
+                            <h4>Call Us</h4>
+                            <p><a href="tel:+27111234567">+27 11 123 4567</a></p>
+                        </div>
+                    </div>
 
-        <!-- Hours of operation in table format -->
-        <section class="contact-section">
-            <h3>Hours of Operation</h3>
-            <!-- Table for structured business hours data -->
-            <table>
-                <tr>
-                    <th>Day</th>
-                    <th>Hours</th>
-                </tr>
-                <tr>
-                    <td>Monday - Friday</td>
-                    <td>6:00 AM - 6:00 PM</td>
-                </tr>
-                <tr>
-                    <td>Saturday</td>
-                    <td>7:00 AM - 5:00 PM</td>
-                </tr>
-                <tr>
-                    <td>Sunday</td>
-                    <td>8:00 AM - 3:00 PM</td>
-                </tr>
-                <tr>
-                    <td>Public Holidays</td>
-                    <td>8:00 AM - 2:00 PM</td>
-                </tr>
-            </table>
-        </section>
+                    <div class="contact-item">
+                        <div class="contact-icon">✉️</div>
+                        <div class="contact-text">
+                            <h4>Email Us</h4>
+                            <p><a href="mailto:info@delighthomebakery.co.za">info@delighthomebakery.co.za</a></p>
+                        </div>
+                    </div>
 
-        <!-- Location information with embedded map -->
-        <section class="contact-section">
-            <h3>Find Us</h3>
-            <p>We're located in the Ruimsig Plaza, next to the Checkers supermarket. Ample parking available.</p>
-            <p>Look for the building with the giant pretzel on the roof!</p>
+                    <div class="contact-item">
+                        <div class="contact-icon">🕒</div>
+                        <div class="contact-text">
+                            <h4>Business Hours</h4>
+                            <ul class="hours-list">
+                                <li><span>Monday - Friday:</span> <span>6:00 AM - 6:00 PM</span></li>
+                                <li><span>Saturday:</span> <span>7:00 AM - 5:00 PM</span></li>
+                                <li><span>Sunday:</span> <span>8:00 AM - 3:00 PM</span></li>
+                                <li><span>Public Holidays:</span> <span>8:00 AM - 2:00 PM</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
 
-            <h4>Find Us On The Map</h4>
-            <!-- Container for embedded Google Maps -->
-            <div class="map-container">
-                <!-- iframe: Embeds external map content within the page -->
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3171.8833407840334!2d28.04730594967848!3d-26.08720683528215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e95740d4d9a9d99%3A0x3fbe7c204f3a2fa0!2sRuimsig%2C%20Roodepoort%2C%20South%20Africa!5e0!3m2!1sen!2sus!4v1619544180420!5m2!1sen!2sus"
-                    width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
+                <!-- Interactive map -->
+                <div class="contact-map">
+                    <h3>Find Us</h3>
+                    <!-- iframe: Embeds external map content within the page -->
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3171.8833407840334!2d28.04730594967848!3d-26.08720683528215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e95740d4d9a9d99%3A0x3fbe7c204f3a2fa0!2sRuimsig%2C%20Roodepoort%2C%20South%20Africa!5e0!3m2!1sen!2sus!4v1619544180420!5m2!1sen!2sus"
+                        width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
             </div>
         </section>
 
-        <!-- Contact form for sending messages -->
-        <section class="contact-section">
-            <h3>Send Us a Message</h3>
-            <!-- Form for user to send messages to the bakery -->
-            <form class="contact-form" action="#" method="post">
-                <!-- Name field -->
-                <label for="contact-name">Your Name:</label>
-                <input type="text" id="contact-name" name="contact-name" required>
+        <!-- Contact form section -->
+        <section class="contact-form-section">
+            <div class="section-title">
+                <br>
+                <br>
+                <h3>Send Us a Message</h3>
+                <p>Have a question or feedback? We'd love to hear from you</p>
+            </div>
 
-                <!-- Email field -->
-                <label for="contact-email">Your Email:</label>
-                <input type="email" id="contact-email" name="contact-email" required>
+            <!-- Contact form with validation -->
+            <form id="contact-form" class="contact-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="contact-name">Full Name *</label>
+                        <input type="text" id="contact-name" name="contact-name" required minlength="2" maxlength="50">
+                        <span class="error-message" id="contact-name-error"></span>
+                    </div>
 
-                <!-- Subject field -->
-                <label for="contact-subject">Subject:</label>
-                <input type="text" id="contact-subject" name="contact-subject" required>
+                    <div class="form-group">
+                        <label for="contact-email">Email Address *</label>
+                        <input type="email" id="contact-email" name="contact-email" required>
+                        <span class="error-message" id="contact-email-error"></span>
+                    </div>
+                </div>
 
-                <!-- Message textarea for longer text input -->
-                <label for="contact-message">Message:</label>
-                <textarea id="contact-message" name="contact-message" rows="5" required></textarea>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="contact-phone">Phone Number</label>
+                        <input type="tel" id="contact-phone" name="contact-phone" pattern="[0-9+\-\s()]{10,15}">
+                        <span class="error-message" id="contact-phone-error"></span>
+                    </div>
 
-                <!-- Submit button -->
-                <button type="submit" class="cta-button">Send Message</button>
+                    <div class="form-group">
+                        <label for="contact-subject">Subject *</label>
+                        <select id="contact-subject" name="contact-subject" required>
+                            <option value="">Please select...</option>
+                            <option value="general">General Inquiry</option>
+                            <option value="feedback">Feedback</option>
+                            <option value="complaint">Complaint</option>
+                            <option value="partnership">Partnership Opportunity</option>
+                            <option value="media">Media Inquiry</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <span class="error-message" id="contact-subject-error"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="contact-message">Message *</label>
+                    <textarea id="contact-message" name="contact-message" required minlength="10" maxlength="1000"
+                        placeholder="Please type your message here..."></textarea>
+                    <span class="error-message" id="contact-message-error"></span>
+                </div>
+
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="contact-newsletter" name="contact-newsletter" checked>
+                    <label for="contact-newsletter">Subscribe to our newsletter for updates and special offers</label>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="cta-button">Send Message</button>
+                    <button type="reset" class="secondary-button">Clear Form</button>
+                </div>
             </form>
         </section>
 
-        <!-- Social media links section -->
-        <section class="contact-section">
-            <h3>Follow Us</h3>
-            <p>Stay updated with our daily specials and new products:</p>
-            <div class="social-media">
-                <ul>
-                    <li>Facebook: @DelightHomeBakery</li>
-                    <li>Instagram: @DelightHomeBakery</li>
-                    <li>Twitter: @DelightBakeryJHB</li>
-                </ul>
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <div class="section-title">
+                <h3>Common Questions</h3>
             </div>
-        </section>
-
-        <!-- FAQ section: Frequently Asked Questions -->
-        <section class="contact-section">
-            <h3>Frequently Asked Questions</h3>
-
-            <!-- Individual FAQ items -->
-            <article>
-                <h4>Do you deliver?</h4>
-                <p>Yes, we deliver to most areas in Johannesburg. See our delivery areas on the <a
-                        href="enquiry.html">Order page</a>.</p>
-            </article>
-
-            <article>
-                <h4>Do you make gluten-free products?</h4>
-                <p>Yes, we have a selection of gluten-free baked goods. Please ask about our daily options.</p>
-            </article>
-
-            <article>
-                <h4>Can I place a large order for an event?</h4>
-                <p>Absolutely! We cater events of all sizes. Please place orders at least 48 hours in advance for large
-                    orders.</p>
-            </article>
-
-            <article>
-                <h4>Do you have parking?</h4>
-                <p>Yes, we have ample parking behind our bakery building.</p>
-            </article>
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        Do you offer catering for events?
+                    </button>
+                    <div class="accordion-content">
+                        <p>Yes, we offer catering services for events of all sizes. Please contact us at least one week
+                            in advance to discuss your needs.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        Can I place a custom cake order?
+                    </button>
+                    <div class="accordion-content">
+                        <p>Absolutely! We specialize in custom cakes for all occasions. Please use our order form or
+                            visit the bakery to discuss your design.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        Do you have gluten-free options?
+                    </button>
+                    <div class="accordion-content">
+                        <p>Yes, we offer a selection of gluten-free baked goods. Please check our products page or ask
+                            in-store for daily options.</p>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
@@ -240,7 +278,7 @@
                         South Africa
                     </address>
                     <p>Phone: <a href="tel:+27111234567">+27 11 123 4567</a></p>
-                    <p>Email: <a href="mailto:orders@delighthomebakery.co.za">orders@delighthomebakery.co.za</a></p>
+                    <p>Email: <a href="mailto:info@delighthomebakery.co.za">info@delighthomebakery.co.za</a></p>
                 </div>
 
                 <!-- Business hours -->
@@ -261,6 +299,9 @@
             </div>
         </div>
     </footer>
+
+    <!-- Leaflet JavaScript for map -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 </body>
 
 </html>
