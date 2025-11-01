@@ -5,9 +5,17 @@
     <!-- Document setup  -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Products - Delight Home Bakery</title>
+    <title>Our Products - Delight Home Bakery | Artisan Bread, Pastries & Cakes</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Browse Delight Home Bakery's menu of artisanal bread, pastries, cakes, and beverages. Fresh baked daily in Johannesburg. Order online for delivery.">
+    <meta name="keywords"
+        content="bakery products, artisan bread, pastries, cakes, cookies, coffee, Johannesburg bakery, online ordering, sourdough, croissants, custom cakes">
+    <meta name="author" content="Delight Home Bakery">
     <!-- Linking external CSS file for styling -->
     <link rel="stylesheet" href="style.css">
+    <!-- Linking JavaScript file -->
+    <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -16,7 +24,7 @@
         <div class="header-container">
             <!-- Logo and business name section -->
             <div class="logo-container">
-                <img src="_images/logo/logo (1).png" alt="Delight Home Bakery Logo">
+                <img src="_images/logo/logo (1).png" alt="Delight Home Bakery Logo - Artisan Bakery Since 2004">
                 <div class="logo-text">
                     <h1>Delight Home Bakery</h1>
                     <span>Since 2004</span>
@@ -24,7 +32,7 @@
             </div>
 
             <!-- Main navigation menu -->
-            <nav>
+            <nav id="main-nav">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
@@ -44,8 +52,8 @@
                     <span class="cart-count">3</span>
                 </div>
                 <button class="theme-toggle">🌙 Dark Mode</button>
-                <!-- Mobile hamburger menu (requires JavaScript) -->
-                <div class="mobile-menu" onclick="toggleMenu()">
+                <!-- Mobile hamburger menu -->
+                <div class="mobile-menu" id="mobile-menu-toggle">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -64,8 +72,29 @@
 
     <!-- Main content area of the products page -->
     <main class="container">
+        <!-- Search functionality -->
+        <section class="search-section">
+            <div class="search-container">
+                <input type="text" id="product-search" placeholder="Search for products...">
+                <button id="search-button">Search</button>
+            </div>
+            <div id="search-results" class="search-results"></div>
+        </section>
+
+        <!-- Product filter tabs -->
+        <section class="filter-section">
+            <div class="filter-tabs">
+                <button class="filter-tab active" data-category="all">All Products</button>
+                <button class="filter-tab" data-category="bread">Breads</button>
+                <button class="filter-tab" data-category="pastries">Pastries</button>
+                <button class="filter-tab" data-category="cakes">Cakes</button>
+                <button class="filter-tab" data-category="cookies">Cookies</button>
+                <button class="filter-tab" data-category="beverages">Beverages</button>
+            </div>
+        </section>
+
         <!-- Breads category section -->
-        <section class="category-section">
+        <section class="category-section" data-category="bread">
             <div class="section-title">
                 <h3>Artisan Breads</h3>
                 <p>Freshly baked daily using traditional methods</p>
@@ -76,7 +105,8 @@
                 <!-- Individual product item with badge -->
                 <li class="menu-item">
                     <div class="item-badge badge-best-seller">Best Seller</div>
-                    <img src="_images/product/bread/olive_ciabatta.jpg" alt="Artisan Olive Ciabatta">
+                    <img src="_images/product/bread/olive_ciabatta.jpg"
+                        alt="Artisan Olive Ciabatta Bread - Crusty with Olive Filling">
                     <div class="menu-item-content">
                         <h3>Artisan Olive Ciabatta</h3>
                         <p>A crusty outer shell and soft moist center filled with olives.</p>
@@ -88,7 +118,7 @@
                 <!-- Additional product items follow same structure -->
                 <li class="menu-item">
                     <div class="item-badge badge-popular">Popular</div>
-                    <img src="_images/product/bread/sourdough.jpg" alt="Rustic Sourdough Bread">
+                    <img src="_images/product/bread/sourdough.jpg" alt="Rustic Sourdough Bread - Tangy Flavor">
                     <div class="menu-item-content">
                         <h3>Rustic Sourdough</h3>
                         <p>A crusty, open crumb loaf with a delightful tangy flavor.</p>
@@ -99,7 +129,8 @@
 
                 <li class="menu-item">
                     <div class="item-badge badge-new">New</div>
-                    <img src="_images/product/bread/whole_wheat.jpg" alt="Whole Wheat Honey Oat Bread">
+                    <img src="_images/product/bread/whole_wheat.jpg"
+                        alt="Whole Wheat Honey Oat Bread - Sweetened with Local Honey">
                     <div class="menu-item-content">
                         <h3>Whole Wheat Honey Oat</h3>
                         <p>Sweetened with local honey.</p>
@@ -109,7 +140,8 @@
                 </li>
 
                 <li class="menu-item">
-                    <img src="_images/product/bread/french_baguettet.jpg" alt="Classic French Baguette">
+                    <img src="_images/product/bread/french_baguettet.jpg"
+                        alt="Classic French Baguette - Traditional Crisp Baguette">
                     <div class="menu-item-content">
                         <h3>Classic French Baguette</h3>
                         <p>Traditional crisp baguette.</p>
@@ -119,7 +151,7 @@
                 </li>
 
                 <li class="menu-item">
-                    <img src="_images/product/bread/german_rye.jpg" alt="German Rye Bread">
+                    <img src="_images/product/bread/german_rye.jpg" alt="German Rye Bread - Dense and Hearty">
                     <div class="menu-item-content">
                         <h3>German rye bread</h3>
                         <p>Dense and hearty with a rich flavor.</p>
@@ -130,7 +162,7 @@
 
                 <li class="menu-item">
                     <div class="item-badge badge-favorite">Favorite</div>
-                    <img src="_images/product/bread/multigrain_loaf.jpg" alt="Multigrain Loaf">
+                    <img src="_images/product/bread/multigrain_loaf.jpg" alt="Multigrain Loaf - Seven Grains and Seeds">
                     <div class="menu-item-content">
                         <h3>Multigrain Loaf</h3>
                         <p>Seven grains and seeds.</p>
@@ -144,7 +176,7 @@
         <!-- Pastries category section -->
         <br>
         <br>
-        <section class="category-section">
+        <section class="category-section" data-category="pastries">
             <div class="section-title">
                 <h3>Pastries & Croissants</h3>
                 <p>Flaky, buttery pastries made with real butter</p>
@@ -154,7 +186,7 @@
             <ul class="menu-grid">
                 <li class="menu-item">
                     <div class="item-badge badge-best-seller">Best Seller</div>
-                    <img src="_images/product/pastries/butter_croissant.jpg" alt="Butter Croissant">
+                    <img src="_images/product/pastries/butter_croissant.jpg" alt="Butter Croissant - Flaky Pastry">
                     <div class="menu-item-content">
                         <h3>Butter Croissant</h3>
                         <p>Flaky, all-butter croissant.</p>
@@ -165,7 +197,8 @@
 
                 <li class="menu-item">
                     <div class="item-badge badge-popular">Popular</div>
-                    <img src="_images/product/pastries/chocolate_crossant.jpg" alt="Chocolate Almond Croissant">
+                    <img src="_images/product/pastries/chocolate_crossant.jpg"
+                        alt="Chocolate Almond Croissant - Filled with Dark Chocolate">
                     <div class="menu-item-content">
                         <h3>Chocolate Almond Croissant</h3>
                         <p>Filled with dark chocolate.</p>
@@ -175,7 +208,7 @@
                 </li>
 
                 <li class="menu-item">
-                    <img src="_images/product/pastries/apple_turnover.jpg" alt="Apple Turnover">
+                    <img src="_images/product/pastries/apple_turnover.jpg" alt="Apple Turnover - Spiced Apple Filling">
                     <div class="menu-item-content">
                         <h3>Apple Turnover</h3>
                         <p>Spiced apple filling.</p>
@@ -186,7 +219,8 @@
 
                 <li class="menu-item">
                     <div class="item-badge badge-new">New</div>
-                    <img src="_images/product/pastries/pain_au_chocolate.jpg" alt="Pain au chocolate">
+                    <img src="_images/product/pastries/pain_au_chocolate.jpg"
+                        alt="Pain au Chocolate - Buttery Pastry with Chocolate Batons">
                     <div class="menu-item-content">
                         <h3>Pain au chocolate</h3>
                         <p>Buttery pastry with chocolate batons.</p>
@@ -200,7 +234,7 @@
         <!-- Cakes category section -->
         <br>
         <br>
-        <section class="category-section">
+        <section class="category-section" data-category="cakes">
             <div class="section-title">
                 <h3>Cakes & Desserts</h3>
                 <p>Perfect for celebrations or everyday treats</p>
@@ -210,7 +244,8 @@
             <ul class="menu-grid">
                 <li class="menu-item">
                     <div class="item-badge badge-popular">Popular</div>
-                    <img src="_images/product/cakes/chocolate_decadence_cake.jpg" alt="Chocolate Decadence Cake">
+                    <img src="_images/product/cakes/chocolate_decadence_cake.jpg"
+                        alt="Chocolate Decadence Cake - Rich Flourless Chocolate">
                     <div class="menu-item-content">
                         <h3>Chocolate Decadence Cake</h3>
                         <p>Rich flourless chocolate.</p>
@@ -222,7 +257,7 @@
 
                 <li class="menu-item">
                     <div class="item-badge badge-best-seller">Best Seller</div>
-                    <img src="_images/product/cakes/carrot_cake.jpg" alt="Carrot Cake">
+                    <img src="_images/product/cakes/carrot_cake.jpg" alt="Carrot Cake with Cream Cheese Frosting">
                     <div class="menu-item-content">
                         <h3>Carrot Cake</h3>
                         <p>With cream cheese frosting.</p>
@@ -233,23 +268,25 @@
                 </li>
 
                 <li class="menu-item">
-                    <img src="_images/product/cakes/berry_cheesecake.jpg" alt="Berry Cheesecake">
+                    <img src="_images/product/cakes/red_velvet_cake.jpg" alt="Red Velvet Cake - Cream Cheese Frosting">
                     <div class="menu-item-content">
-                        <h3>Berry Cheesecake</h3>
-                        <p>New York style with berry compote.</p>
-                        <span class="price">Slice - R52.00</span>
-                        <span class="price">Full Cake - R248.00</span>
+                        <h3>Red Velvet Cake</h3>
+                        <p>Cream cheese frosting.</p>
+                        <span class="price">Slice - R50.00</span>
+                        <span class="price">Full Cake - R240.00</span>
                         <button class="add-to-cart">Add to Cart</button>
                     </div>
                 </li>
 
                 <li class="menu-item">
                     <div class="item-badge badge-favorite">Favorite</div>
-                    <img src="_images/product/cakes/red_valvet.jpg" alt="Red Velvet Cupcake">
+                    <img src="_images/product/cakes/lemon_drizzle_cake.jpg"
+                        alt="Lemon Drizzle Cake - Zesty Lemon Glaze">
                     <div class="menu-item-content">
-                        <h3>Red Velvet Cupcake</h3>
-                        <p>Cream cheese frosting.</p>
-                        <span class="price">R28.00</span>
+                        <h3>Lemon Drizzle Cake</h3>
+                        <p>Zesty lemon glaze.</p>
+                        <span class="price">Slice - R42.00</span>
+                        <span class="price">Full Cake - R200.00</span>
                         <button class="add-to-cart">Add to Cart</button>
                     </div>
                 </li>
@@ -259,49 +296,45 @@
         <!-- Cookies category section -->
         <br>
         <br>
-        <section class="category-section">
+        <section class="category-section" data-category="cookies">
             <div class="section-title">
                 <h3>Cookies & Biscuits</h3>
-                <p>Crispy cookies and traditional biscuits</p>
+                <p>Perfect with coffee or as a sweet treat</p>
             </div>
 
             <!-- Cookies product list using grid layout -->
             <ul class="menu-grid">
                 <li class="menu-item">
                     <div class="item-badge badge-best-seller">Best Seller</div>
-                    <img src="_images/product/cookies/chocolate_chip.jpg" alt="Chocolate Chip Cookie">
+                    <img src="_images/product/cookies/chocolate_chip_cookie.jpg"
+                        alt="Chocolate Chip Cookie - Classic with Dark Chocolate">
                     <div class="menu-item-content">
                         <h3>Chocolate Chip Cookie</h3>
-                        <p>Loaded with chocolate chunks.</p>
-                        <span class="price">R12.00</span>
+                        <p>Classic with dark chocolate.</p>
+                        <span class="price">R15.00</span>
                         <button class="add-to-cart">Add to Cart</button>
                     </div>
                 </li>
+
                 <li class="menu-item">
-                    <img src="_images/product/cookies/oatmeal_raisin.jpg" alt="Oatmeal Raisin Cookie">
+                    <img src="_images/product/cookies/oatmeal_raisin_cookie.jpg"
+                        alt="Oatmeal Raisin Cookie - Chewy with Cinnamon">
                     <div class="menu-item-content">
                         <h3>Oatmeal Raisin Cookie</h3>
-                        <p>Classic with cinnamon.</p>
-                        <span class="price">R10.00</span>
-                        <button class="add-to-cart">Add to Cart</button>
-                    </div>
-                </li>
-                <li class="menu-item">
-                    <div class="item-badge badge-popular">Popular</div>
-                    <img src="_images/product/cookies/shortbread.jpg" alt="Shortbread Biscuit">
-                    <div class="menu-item-content">
-                        <h3>Shortbread Biscuit</h3>
-                        <p>Buttery traditional shortbread.</p>
-                        <span class="price">R8.00</span>
-                        <button class="add-to-cart">Add to Cart</button>
-                    </div>
-                </li>
-                <li class="menu-item">
-                    <img src="_images/product/cookies/double_chocolate.jpg" alt="Double Chocolate Cookie">
-                    <div class="menu-item-content">
-                        <h3>Double Chocolate Cookie</h3>
-                        <p>Chocolate dough with white chocolate chips.</p>
+                        <p>Chewy with cinnamon.</p>
                         <span class="price">R14.00</span>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </li>
+
+                <li class="menu-item">
+                    <div class="item-badge badge-new">New</div>
+                    <img src="_images/product/cookies/almond_biscotti.jpg"
+                        alt="Almond Biscotti - Twice-Baked Italian Cookie">
+                    <div class="menu-item-content">
+                        <h3>Almond Biscotti</h3>
+                        <p>Twice-baked Italian cookie.</p>
+                        <span class="price">R18.00</span>
                         <button class="add-to-cart">Add to Cart</button>
                     </div>
                 </li>
@@ -311,73 +344,58 @@
         <!-- Beverages category section -->
         <br>
         <br>
-        <section class="category-section">
+        <section class="category-section" data-category="beverages">
             <div class="section-title">
-                <h3>Coffee & Beverages</h3>
-                <p>Freshly brewed to complement our baked goods</p>
+                <h3>Beverages</h3>
+                <p>Perfect pairings for our baked goods</p>
             </div>
 
             <!-- Beverages product list using grid layout -->
             <ul class="menu-grid">
                 <li class="menu-item">
                     <div class="item-badge badge-best-seller">Best Seller</div>
-                    <img src="_images/product/beverages/espresso.jpg" alt="Espresso">
+                    <img src="_images/product/beverages/filter_coffee.jpg"
+                        alt="Freshly Brewed Filter Coffee - Premium Local Roast">
                     <div class="menu-item-content">
-                        <h3>Espresso</h3>
-                        <p>Strong and rich.</p>
-                        <span class="price">R18.00</span>
-                        <button class="add-to-cart">Add to Cart</button>
-                    </div>
-                </li>
-                <li class="menu-item">
-                    <img src="_images/product/beverages/cappuccino.jpg" alt="Cappuccino">
-                    <div class="menu-item-content">
-                        <h3>Cappuccino</h3>
-                        <p>Perfect foam-to-coffee ratio.</p>
-                        <span class="price">R25.00</span>
-                        <button class="add-to-cart">Add to Cart</button>
-                    </div>
-                </li>
-                <li class="menu-item">
-                    <div class="item-badge badge-popular">Popular</div>
-                    <img src="_images/product/beverages/herbal_tea.jpg" alt="Herbal Tea">
-                    <div class="menu-item-content">
-                        <h3>Herbal Tea</h3>
-                        <p>Selection of premium teas.</p>
-                        <span class="price">R20.00</span>
-                        <button class="add-to-cart">Add to Cart</button>
-                    </div>
-                </li>
-                <li class="menu-item">
-                    <img src="_images/product/beverages/orange_juice.jpg" alt="Fresh Orange Juice">
-                    <div class="menu-item-content">
-                        <h3>Fresh Orange Juice</h3>
-                        <p>Freshly squeezed.</p>
+                        <h3>Freshly Brewed Filter Coffee</h3>
+                        <p>Premium local roast.</p>
                         <span class="price">R28.00</span>
                         <button class="add-to-cart">Add to Cart</button>
                     </div>
                 </li>
+
+                <li class="menu-item">
+                    <img src="_images/product/beverages/cappuccino.jpg" alt="Cappuccino - Steamed Milk with Espresso">
+                    <div class="menu-item-content">
+                        <h3>Cappuccino</h3>
+                        <p>Steamed milk with espresso.</p>
+                        <span class="price">R32.00</span>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </li>
+
+                <li class="menu-item">
+                    <img src="_images/product/beverages/earl_grey_tea.jpg"
+                        alt="Earl Grey Tea - Bergamot Scented Black Tea">
+                    <div class="menu-item-content">
+                        <h3>Earl Grey Tea</h3>
+                        <p>Bergamot scented black tea.</p>
+                        <span class="price">R22.00</span>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </li>
+
+                <li class="menu-item">
+                    <div class="item-badge badge-new">New</div>
+                    <img src="_images/product/beverages/hot_chocolate.jpg" alt="Hot Chocolate - Rich Belgian Chocolate">
+                    <div class="menu-item-content">
+                        <h3>Hot Chocolate</h3>
+                        <p>Rich Belgian chocolate.</p>
+                        <span class="price">R30.00</span>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </li>
             </ul>
-        </section>
-
-        <!-- Seasonal specials section -->
-        <br>
-        <br>
-        <section class="category-section">
-            <div class="section-title">
-                <h3>Seasonal Specials</h3>
-            </div>
-            <p>Ask about our seasonal offerings that change weekly based on fresh, local ingredients!</p>
-            <p>Current specials include pumpkin spice muffins and apple cider donuts.</p>
-        </section>
-
-        <!-- Custom orders section with link to order page -->
-        <section class="category-section">
-            <div class="section-title">
-                <h3>Custom Orders</h3>
-            </div>
-            <p>We specialize in custom cakes for birthdays, weddings, and special events.</p>
-            <p>Please visit our <a href="enquiry.html">Order page</a> to place custom orders.</p>
         </section>
     </main>
 
@@ -404,7 +422,7 @@
                         <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About Us</a></li>
                         <!-- Current page is not a link (active state) -->
-                        <li>Products</li>
+                        <li>Our Products</li>
                         <li><a href="enquiry.html">Place Order</a></li>
                         <li><a href="contact.html">Contact Us</a></li>
                     </ul>
