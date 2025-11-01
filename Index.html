@@ -5,9 +5,17 @@
     <!-- Document setup -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Delight Home Bakery - Fresh Baked Goods</title>
+    <title>Delight Home Bakery - Fresh Baked Goods | Artisan Bread & Pastries</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Delight Home Bakery - Fresh artisanal bread, pastries, and cakes baked daily since 2004. Local Johannesburg bakery with delivery. Order online today!">
+    <meta name="keywords"
+        content="bakery, bread, pastries, cakes, Johannesburg, artisanal, fresh baked, delivery, custom cakes, sourdough, croissants">
+    <meta name="author" content="Delight Home Bakery">
     <!-- Linking external CSS file for styling -->
     <link rel="stylesheet" href="style.css">
+    <!-- Linking JavaScript file -->
+    <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -16,7 +24,7 @@
         <div class="header-container">
             <!-- Logo and business name section -->
             <div class="logo-container">
-                <img src="_images/logo/logo (1).png" alt="Delight Home Bakery Logo">
+                <img src="_images/logo/logo (1).png" alt="Delight Home Bakery Logo - Artisan Bakery Since 2004">
                 <div class="logo-text">
                     <h1>Delight Home Bakery</h1>
                     <span>Since 2004</span>
@@ -24,7 +32,7 @@
             </div>
 
             <!-- Main navigation menu -->
-            <nav>
+            <nav id="main-nav">
                 <ul>
                     <!-- Current page is not a link an active state -->
                     <li>Home</li>
@@ -44,8 +52,8 @@
                     <span class="cart-count">3</span>
                 </div>
                 <button class="theme-toggle">🌙 Dark Mode</button>
-                <!-- Mobile hamburger menu (requires JavaScript) -->
-                <div class="mobile-menu" onclick="toggleMenu()">
+                <!-- Mobile hamburger menu -->
+                <div class="mobile-menu" id="mobile-menu-toggle">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -105,7 +113,8 @@
                 <!-- First special item with badge -->
                 <li class="special-item">
                     <div class="item-badge badge-best-seller">Best Seller</div>
-                    <img src="_images/home/olive_ciabatta.jpg" alt="Artisan Olive Ciabatta">
+                    <img src="_images/home/olive_ciabatta.jpg"
+                        alt="Artisan Olive Ciabatta Bread - Crusty with Olive Filling">
                     <div class="menu-item-content">
                         <h3>Artisan Olive Ciabatta</h3>
                         <p>A crusty outer shell and soft moist center filled with olives.</p>
@@ -117,7 +126,7 @@
                 <!-- Second special item with badge -->
                 <li class="special-item">
                     <div class="item-badge badge-popular">Popular</div>
-                    <img src="_images/home/butter_croissant.jpg" alt="Butter Croissant">
+                    <img src="_images/home/butter_croissant.jpg" alt="Butter Croissant - Flaky Pastry">
                     <div class="menu-item-content">
                         <h3>Butter Croissant</h3>
                         <p>Flaky, all-butter croissant.</p>
@@ -129,7 +138,7 @@
                 <!-- Third special item with badge -->
                 <li class="special-item">
                     <div class="item-badge badge-favorite">Favorite</div>
-                    <img src="_images/home/carrot_cake.jpg" alt="Carrot Cake">
+                    <img src="_images/home/carrot_cake.jpg" alt="Carrot Cake with Cream Cheese Frosting">
                     <div class="menu-item-content">
                         <h3>Carrot Cake</h3>
                         <p>With cream cheese frosting.</p>
@@ -153,7 +162,8 @@
                             delicious and their pastries melt in your mouth. I stop by every weekend for my favourite
                             breads.</p>
                         <div class="testimonial-author">
-                            <img src="_images/home/testimonials/customer1.jpg" alt="Dhilan G." class="author-avatar">
+                            <img src="_images/home/testimonials/customer1.jpg" alt="Dhilan G. - Loyal Customer"
+                                class="author-avatar">
                             <div class="author-details">
                                 <h4>Dhilan G.</h4>
                                 <p>Loyal Customer</p>
@@ -161,10 +171,13 @@
                         </div>
                     </div>
                     <div class="testimonial">
-                        <p class="testimonial-text">The custom birthday cake I ordered for my father's party was beyond My
-                            expectation and it was both beautiful and delicious. All the guests asked where it was from!</p>
+                        <p class="testimonial-text">The custom birthday cake I ordered for my father's party was beyond
+                            My
+                            expectation and it was both beautiful and delicious. All the guests asked where it was from!
+                        </p>
                         <div class="testimonial-author">
-                            <img src="_images/home/testimonials/customer2.jpg" alt="Crisy K." class="author-avatar">
+                            <img src="_images/home/testimonials/customer2.jpg" alt="Crisy K. - Northcliff Resident"
+                                class="author-avatar">
                             <div class="author-details">
                                 <h4>Crisy K.</h4>
                                 <p>Northcliff Resident</p>
@@ -173,10 +186,12 @@
                     </div>
                     <div class="testimonial">
                         <p class="testimonial-text">As a person that often travels to France, I'm very particular about
-                            my croissants and pastries, but Delight Home Bakery makes their croissant evne better than some 
+                            my croissants and pastries, but Delight Home Bakery makes their croissant evne better than
+                            some
                             French bakerys, they are buttery, flaky perfection.</p>
                         <div class="testimonial-author">
-                            <img src="_images/home/testimonials/customer3.jpg" alt="Adeline B." class="author-avatar">
+                            <img src="_images/home/testimonials/customer3.jpg" alt="Adeline B. - Food Enthusiast"
+                                class="author-avatar">
                             <div class="author-details">
                                 <h4>Adeline B.</h4>
                                 <p>Food Enthusiast</p>
@@ -210,7 +225,7 @@
         <div class="container">
             <h4>Subscribe to Our Newsletter</h4>
             <p>Get updates on daily specials, new products, and exclusive offers.</p>
-            <form class="newsletter-form">
+            <form class="newsletter-form" id="newsletter-form">
                 <input type="email" class="newsletter-input" placeholder="Your email address" required>
                 <button type="submit" class="newsletter-button">Subscribe</button>
             </form>
