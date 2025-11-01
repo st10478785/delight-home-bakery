@@ -2,12 +2,20 @@
 <html lang="en">
 
 <head>
-    <!-- Document setup  -->
+    <!-- Document setup -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Place Order - Delight Home Bakery</title>
+    <title>Order & Enquiry - Delight Home Bakery | Custom Orders & Pricing</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Place custom orders, enquire about products, or become a volunteer/sponsor at Delight Home Bakery. Get pricing and availability for our artisanal baked goods.">
+    <meta name="keywords"
+        content="bakery order, custom cakes, catering, wholesale, volunteer, sponsor, pricing, availability, Johannesburg bakery">
+    <meta name="author" content="Delight Home Bakery">
     <!-- Linking external CSS file for styling -->
     <link rel="stylesheet" href="style.css">
+    <!-- Linking JavaScript file -->
+    <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -16,7 +24,7 @@
         <div class="header-container">
             <!-- Logo and business name section -->
             <div class="logo-container">
-                <img src="_images/logo/logo (1).png" alt="Delight Home Bakery Logo">
+                <img src="_images/logo/logo (1).png" alt="Delight Home Bakery Logo - Artisan Bakery Since 2004">
                 <div class="logo-text">
                     <h1>Delight Home Bakery</h1>
                     <span>Since 2004</span>
@@ -24,7 +32,7 @@
             </div>
 
             <!-- Main navigation menu -->
-            <nav>
+            <nav id="main-nav">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
@@ -44,8 +52,8 @@
                     <span class="cart-count">3</span>
                 </div>
                 <button class="theme-toggle">🌙 Dark Mode</button>
-                <!-- Mobile hamburger menu (requires JavaScript) -->
-                <div class="mobile-menu" onclick="toggleMenu()">
+                <!-- Mobile hamburger menu -->
+                <div class="mobile-menu" id="mobile-menu-toggle">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -58,15 +66,19 @@
     <section class="page-banner">
         <div class="page-banner-content">
             <h2>Place Your Order</h2>
-            <p>We're here to fulfill your bakery cravings</p>
+            <p>Custom orders, wholesale enquiries, and partnership opportunities</p>
         </div>
     </section>
 
     <!-- Main content area of the enquiry page -->
     <main class="container">
-        <!-- Google Form section: I embedded an iframe for order processing -->
-        <section>
-            <h3>Order Form</h3>
+        <!-- Order form section -->
+        <section class="order-section">
+            <div class="section-title">
+                <h3>Order Form</h3>
+                <p>Please fill out the form below to place your order or make an enquiry</p>
+            </div>
+
             <div class="google-form-container">
                 <!-- iframe: Embeds external content (Google Form) within the page -->
                 <iframe
@@ -116,6 +128,51 @@
                 <p>Or email: orders@delighthomebakery.co.za</p>
             </article>
         </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <div class="section-title">
+                <h3>Frequently Asked Questions</h3>
+            </div>
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        How far in advance should I place my order?
+                    </button>
+                    <div class="accordion-content">
+                        <p>For custom cakes and large orders, we recommend placing your order at least 3-5 days in
+                            advance. For wedding cakes or very large orders, 2-3 weeks notice is preferred.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        Do you offer delivery?
+                    </button>
+                    <div class="accordion-content">
+                        <p>Yes, we offer delivery within Johannesburg and surrounding areas. Delivery fees vary based on
+                            location and order size.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        Can you accommodate dietary restrictions?
+                    </button>
+                    <div class="accordion-content">
+                        <p>Yes, we offer gluten-free, dairy-free, and vegan options. Please specify your requirements in
+                            the order form.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        What are your payment options?
+                    </button>
+                    <div class="accordion-content">
+                        <p>We accept cash, credit/debit cards, and EFT payments. A 50% deposit is required for custom
+                            orders over R500.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- Footer: Consistent across all pages with contact info and links -->
@@ -141,7 +198,8 @@
                         <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About Us</a></li>
                         <li><a href="products.html">Our Products</a></li>
-                        <li><a href="enquiry.html">Place Order</a></li>
+                        <!-- Current page is not a link (active state) -->
+                        <li>Place Order</li>
                         <li><a href="contact.html">Contact Us</a></li>
                     </ul>
                 </div>
