@@ -10,7 +10,8 @@
 
 **Group**: 1
 
-**Submission Date**: 27 August 2025 (Part 1); 29 September 2025 (Part 2)
+**Submission Date**: 27 August 2025 (Part 1); 
+29 September 2025 (Part 2); 3 November 2025 (Part 3) POE
 
 **GitHub Repository**: [st10478785/delight-home-bakery](https://github.com/st10478785/delight-home-bakery)
 
@@ -280,7 +281,7 @@ delight_home_bakery/
 - Visual styling and interactive elements
 - CSS Reset
 
-### Phase 2: Responsive Design (11 September - 25 September) - **CURRENT PHASE**
+### Phase 2: Responsive Design (11 September - 25 September)
 
 - Mobile-first responsive breakpoints
 - Cross browser compatibility testing
@@ -376,6 +377,17 @@ delight_home_bakery/
 
 [Phone: Profile Page](<_images/screenshots/Phone/Phone_Profile.jpeg>)
 
+### Phase 3: Responsive Design (1 October - 3 November)
+
+- **Interactive Elements**: Accordions, tabs, modals, and lightbox gallery
+- **Enhanced Navigation**: Improved responsive menu with better mobile experience
+- **Dark Mode**: Complete theme switching with proper contrast
+- **Search Functionality**: Product search with real-time results
+- **Form Validation**: Comprehensive client-side validation with error handling
+- **Cart Flyout**: Slide out cart for better user experience
+- **SEO Optimization**: Meta tags, semantic HTML, and accessibility features
+- **Performance Improvements**: Optimized images and code
+
 ## Changelog ( Learned from YouTube )
 
 ### Version 1 - Initial Release (25 August 2025)
@@ -387,7 +399,7 @@ delight_home_bakery/
 - Form structures with proper validation attributes
 - Image assets organization with alt text
 
-### Version 2 - CSS Styling Implementation (Current)
+### Version 2 - CSS Styling Implementation
 
 #### Visual Design System
 
@@ -438,6 +450,49 @@ I set up font sizes for headings and body text, and used nice fonts for a clear 
 Layouts are built with Grid (for sections) and Flexbox (for alignment).
 
 Buttons and inputs have hover and focus effects for better interaction.
+
+### Version 3 - Enhancing functionality and SEO
+**I added the pseudo classes to the code and the mobile navigation to display as block-level elements**
+
+#### Navigation Improvements
+- Changed up mobile navigation to display as block level elements
+- Enhanced pseudo-class implementation for navigation links
+- Added smooth transitions and focus states
+- Improved touch targets for mobile users
+
+#### Dark Mode Enhancement
+- Complete Change for the dark mode with proper color contrast
+- Added smooth transitions between themes
+- Persistent theme selection using localStorage
+- Improved readability in both light and dark modes
+
+#### Interactive Elements
+- Functionality for FAQ sections
+- Tabbed interfaces for profile and product pages
+- Modal windows for confirmations and details
+- Lightbox gallery for image viewing
+- Added notifications for user feedback
+
+#### Form Enhancements
+- Comprehensive form validation with error messages
+- Real-time validation with visual feedback
+- Confirmation modals for form submissions
+- Form accessibility with proper labels and instructions
+
+#### Search Functionality
+- Product search with real time results
+- Search results dropdown with product details
+- Keyboard navigation for search results
+
+#### Cart Improvements
+- Cart with slide in animation
+- Quantity controls in cart
+- Item removal functionality
+- Cart persistence using localStorage
+
+#### Performance Optimizations
+- **Improved** CSS with reduced redundancy
+- **Added** JavaScript for better performance
 
 ## References
 
@@ -536,3 +591,28 @@ Web.dev (2023) Copy images to the clipboard. Available at: https://web.dev/patte
 Mobile version on wire frames drawn by hand on a software called procreate.
 Gantt chart draw by hand on Procreate software.
 I create the logo using a software on my iPad called Procreate.
+
+## Programming references part three
+
+### CSS Resources
+- [W3Schools CSS](https://www.w3schools.com/css/)
+- [MDN Web Docs - CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
+- [Google Fonts](https://fonts.google.com/)
+- [CSS-Tricks](https://css-tricks.com/)
+
+### JavaScript Resources
+- [W3Schools JavaScript](https://www.w3schools.com/js/)
+- [MDN Web Docs - JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- [JavaScript.info](https://javascript.info/)
+- [JavaScript Design Patterns](https://addyosmani.com/resources/essentialjsdesignpatterns/book/)
+
+### Responsive Design
+- [Responsive Web Design Basics](https://developers.google.com/web/fundamentals/design-and-ux/responsive)
+- [CSS Grid Guide](https://css-tricks.com/snippets/css/complete-guide-grid/)
+- [Flexbox Guide](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+
+### SEO Resources
+- [Google Search Central](https://developers.google.com/search)
+- [SEO Starter Guide](https://developers.google.com/search/docs/beginner/seo-starter-guide)
+- [Moz Beginner's Guide to SEO](https://moz.com/beginners-guide-to-seo)
+

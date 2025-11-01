@@ -22,7 +22,7 @@
   --error-color: #e74c3c;
   --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   --shadow-hover: 0 8px 20px rgba(0, 0, 0, 0.12);
-  --transition: all 0.3s ease;
+  --transition: all 0.5s ease;
   --border-radius: 10px;
   --max-width: 1200px;
 }
@@ -70,7 +70,7 @@ h6 {
   letter-spacing: -0.5px;
 }
 
-/* Making sude that headings are visible in dark mode */
+/* Making sure that the headings are visible in dark mode */
 [data-theme="dark"] h1,
 [data-theme="dark"] h2,
 [data-theme="dark"] h3,
@@ -434,7 +434,7 @@ nav li:not(:has(a)) {
 .add-to-cart,
 .add-to-cart-small,
 .secondary-button {
-  background-color: var(--secondary-color);
+  background-color: #e8a735;
   color: var(--light-background);
   border: 2px solid white;
   border-radius: var(--border-radius);
@@ -444,6 +444,11 @@ nav li:not(:has(a)) {
   text-transform: uppercase;
   font-size: 1rem;
   box-shadow: var(--shadow);
+}
+.hero-buttons .cta-button:first-child, .visit .cta-button{
+  background-color: #e8a735 !important;
+  color: #000000 !important;
+  border-color: #ffffff !important;
 }
 
 .cta-button,
@@ -1131,16 +1136,16 @@ nav li:not(:has(a)) {
 /* Checkout Steps Progress Indicator */
 .checkout-steps {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   padding: 1rem;
 }
 
 .checkout-step {
   display: flex;
-  align-items: center;
-  gap: 0.5rem;
+  align-content: center;
+  gap: 2rem;
 }
 
 .step-number {
