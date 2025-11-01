@@ -5,9 +5,17 @@
     <!-- Document setup -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Delight Home Bakery</title>
+    <title>About Us - Delight Home Bakery | Our Story Since 2004</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Learn about Delight Home Bakery's story since 2004. Our mission, values, and passion for baking artisanal bread and pastries in Johannesburg.">
+    <meta name="keywords"
+        content="about Delight Home Bakery, bakery story, artisanal bread Johannesburg, local bakery, family bakery, Vishay Gosai baker">
+    <meta name="author" content="Delight Home Bakery">
     <!-- Linking external CSS file for styling -->
     <link rel="stylesheet" href="style.css">
+    <!-- Linking JavaScript file -->
+    <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -16,7 +24,7 @@
         <div class="header-container">
             <!-- Logo and business name section -->
             <div class="logo-container">
-                <img src="_images/logo/logo (1).png" alt="Delight Home Bakery Logo">
+                <img src="_images/logo/logo (1).png" alt="Delight Home Bakery Logo - Artisan Bakery Since 2004">
                 <div class="logo-text">
                     <h1>Delight Home Bakery</h1>
                     <span>Since 2004</span>
@@ -24,7 +32,7 @@
             </div>
 
             <!-- Main navigation menu -->
-            <nav>
+            <nav id="main-nav">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <!-- Current page is not a link an active state -->
@@ -44,8 +52,8 @@
                     <span class="cart-count">3</span>
                 </div>
                 <button class="theme-toggle">🌙 Dark Mode</button>
-                <!-- Mobile hamburger menu (requires JavaScript) -->
-                <div class="mobile-menu" onclick="toggleMenu()">
+                <!-- Mobile hamburger menu -->
+                <div class="mobile-menu" id="mobile-menu-toggle">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -75,7 +83,7 @@
                         small neighborhood bakery has grown into a beloved local institution.</p>
                 </div>
                 <div class="about-image">
-                    <img src="_images/about/Bakery.jpg" alt="Our Bakery Interior">
+                    <img src="_images/about/Bakery.jpg" alt="Our Bakery Interior - Delight Home Bakery Store">
                 </div>
             </div>
         </section>
@@ -91,7 +99,7 @@
                 the finest of ingredients. Every morning, our dedicated team arrives before dawn to prepare our
                 signature breads, pastries, and cakes, ensuring that each item meets our high standards of quality and
                 taste.</p>
-                <br>
+            <br>
         </section>
 
         <!-- Our values section: Core principles of the business -->
@@ -139,7 +147,7 @@
             <!-- Flex layout for baker profile with image and text -->
             <div class="baker-profile">
                 <div class="baker-image">
-                    <img src="_images/about/Boss2.JPG" alt="Head Baker Vishay Gosai">
+                    <img src="_images/about/Boss2.JPG" alt="Head Baker Vishay Gosai - Delight Home Bakery Founder">
                 </div>
                 <div class="baker-details">
                     <h4>Vishay Gosai</h4>
@@ -152,6 +160,38 @@
                 </div>
             </div>
         </section>
+
+        <!-- Gallery section with lightbox functionality -->
+        <section class="about-section">
+            <div class="section-title">
+                <h3>Our Bakery Gallery</h3>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="_images/about/gallery1.jpg" alt="Freshly baked bread selection at Delight Home Bakery"
+                        data-lightbox="bakery-gallery">
+                </div>
+                <div class="gallery-item">
+                    <img src="_images/about/gallery2.jpg" alt="Pastry display case at our Johannesburg bakery"
+                        data-lightbox="bakery-gallery">
+                </div>
+                <div class="gallery-item">
+                    <img src="_images/about/gallery3.jpg" alt="Custom cake creations by Delight Home Bakery"
+                        data-lightbox="bakery-gallery">
+                </div>
+                <div class="gallery-item">
+                    <img src="_images/about/gallery4.jpg" alt="Baking process at our artisanal bakery"
+                        data-lightbox="bakery-gallery">
+                </div>
+            </div>
+        </section>
+
+        <!-- Lightbox container (hidden by default) -->
+        <div id="lightbox" class="lightbox">
+            <span class="lightbox-close">&times;</span>
+            <img class="lightbox-content" id="lightbox-img" alt="Enlarged gallery image">
+            <div class="lightbox-caption"></div>
+        </div>
     </main>
 
     <!-- Footer: Consistent across all pages with contact info and links -->
