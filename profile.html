@@ -2,12 +2,14 @@
 <html lang="en">
 
 <head>
-    <!-- Document setup  -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Profile - Delight Home Bakery</title>
-    <!-- Linking external CSS file for styling -->
+    <meta name="description" content="Manage your Delight Home Bakery profile and view order history">
+    <meta name="keywords" content="bakery profile, order history, account settings">
+    <meta name="author" content="Delight Home Bakery">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -16,7 +18,7 @@
         <div class="header-container">
             <!-- Logo and business name section -->
             <div class="logo-container">
-                <img src="_images/logo/logo (1).png" alt="Delight Home Bakery Logo">
+                <img src="_images/logo/logo (1).png" alt="Delight Home Bakery Logo - Artisan Bakery Since 2004">
                 <div class="logo-text">
                     <h1>Delight Home Bakery</h1>
                     <span>Since 2004</span>
@@ -24,7 +26,7 @@
             </div>
 
             <!-- Main navigation menu -->
-            <nav>
+            <nav id="main-nav">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
@@ -41,11 +43,11 @@
             <div class="header-actions">
                 <div class="cart-icon">
                     🛒
-                    <span class="cart-count">3</span>
+                    <span class="cart-count">0</span>
                 </div>
-                <button class="theme-toggle">🌙 Dark Mode</button>
-                <!-- Mobile hamburger menu (requires JavaScript) -->
-                <div class="mobile-menu" onclick="toggleMenu()">
+                <button class="theme-toggle" id="theme-toggle">🌙 Dark Mode</button>
+                <!-- Mobile hamburger menu -->
+                <div class="mobile-menu" id="mobile-menu-toggle">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -54,7 +56,7 @@
         </div>
     </header>
 
-    <!-- Page Banner  -->
+    <!-- Page Banner -->
     <section class="page-banner">
         <div class="page-banner-content">
             <h2>My Profile</h2>
@@ -62,7 +64,7 @@
         </div>
     </section>
 
-    <!-- Main content area of the profile page -->
+     <!-- Main content area of the profile page -->
     <main class="container">
         <!-- Profile overview section: User account summary -->
         <section class="profile-section">
@@ -217,6 +219,7 @@
             </form>
         </section>
     </main>
+
 
     <!-- Footer: Consistent across all pages with contact info and links -->
     <footer>
