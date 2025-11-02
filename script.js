@@ -17,6 +17,11 @@ document.addEventListener("DOMContentLoaded", function () {
   initializeFormValidation();
   initializeFilterTabs();
 
+  // Initializing the interactive map if on contact page
+  if (document.getElementById("interactive-map")) {
+    initializeInteractiveMap();
+  }
+
   // Checking which page we're on and initializing page specific features
   if (document.querySelector(".checkout-container")) {
     initializeCheckoutPage();
@@ -84,6 +89,135 @@ function initializeMobileMenu() {
       mobileMenuToggle.setAttribute("aria-expanded", "false");
     });
   });
+}
+
+// Interactive Map - I'm implementing custom map functionality for the contact page
+function initializeInteractiveMap() {
+  // Bakery coordinates (Ruimsig, Johannesburg)
+  const bakeryLat = -26.083099483606745;
+  const bakeryLng = 27.876323180595374;
+
+  // Creating the map centered on the bakery
+  const map = L.map("interactive-map").setView([bakeryLat, bakeryLng], 15);
+
+  // Adding OpenStreetMap tiles
+  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    attribution:
+      '&copy; <a href="https://www.openstreetmap.org/ ">OpenStreetMap</a> contributors',
+    maxZoom: 19,
+  }).addTo(map);
+
+  // Creating custom bakery icon
+  const bakeryIcon = L.divIcon({
+    className: "custom-marker",
+    html: '<div style="background-color: #e8a735; width: 30px; height: 30px; border-radius: 50%; border: 3px solid white; box-shadow: 0 2px 8px rgba(0,0,0,0.3); display: flex; align-items: center; justify-content: center; font-size: 18px;">🥖</div>',
+    iconSize: [30, 30],
+    iconAnchor: [15, 15],
+  });
+
+  // Adding marker for the bakery
+  const bakeryMarker = L.marker([bakeryLat, bakeryLng], {
+    icon: bakeryIcon,
+  }).addTo(map);
+
+  // Creating popup content
+  const popupContent = `
+    <div style="text-align: center; padding: 10px;">
+      <h4 style="margin: 0 0 10px 0; color: #1c2d26;">Delight Home Bakery</h4>
+      <p style="margin: 5px 0;">123 Baker Street<br>Ruimsig, Roodepoort<br>Johannesburg, 1724</p>
+      <p style="margin: 5px 0;"><strong>Phone:</strong> +27 11 123 4567</p>
+      <p style="margin: 5px 0;"><strong>Hours:</strong> Mon-Fri 6AM-6PM</p>
+    </div>
+  `;
+
+  bakeryMarker.bindPopup(popupContent).openPopup();
+
+  // Get Directions button functionality
+  const getDirectionsBtn = document.getElementById("get-directions");
+  if (getDirectionsBtn) {
+    getDirectionsBtn.addEventListener("click", function () {
+      // Opening Google Maps with directions
+      const mapsUrl = `https://www.google.com/maps/dir/?api=1&destination=${bakeryLat},${bakeryLng}`;
+      window.open(mapsUrl, "_blank");
+    });
+  }
+
+  // Locate Me button functionality
+  const locateMeBtn = document.getElementById("locate-me");
+  if (locateMeBtn) {
+    locateMeBtn.addEventListener("click", function () {
+      if (navigator.geolocation) {
+        locateMeBtn.textContent = "Locating...";
+        locateMeBtn.disabled = true;
+
+        navigator.geolocation.getCurrentPosition(
+          function (position) {
+            const userLat = position.coords.latitude;
+            const userLng = position.coords.longitude;
+
+            // Creating user location marker
+            const userIcon = L.divIcon({
+              className: "user-marker",
+              html: '<div style="background-color: #3498db; width: 20px; height: 20px; border-radius: 50%; border: 3px solid white; box-shadow: 0 2px 8px rgba(0,0,0,0.3);"></div>',
+              iconSize: [20, 20],
+              iconAnchor: [10, 10],
+            });
+
+            const userMarker = L.marker([userLat, userLng], {
+              icon: userIcon,
+            }).addTo(map);
+            userMarker.bindPopup("You are here").openPopup();
+
+            // Fitting the map to show both locations
+            const bounds = L.latLngBounds([
+              [bakeryLat, bakeryLng],
+              [userLat, userLng],
+            ]);
+            map.fitBounds(bounds, { padding: [50, 50] });
+
+            // Drawing a line between user and bakery
+            const routeLine = L.polyline(
+              [
+                [userLat, userLng],
+                [bakeryLat, bakeryLng],
+              ],
+              {
+                color: "#e8a735",
+                weight: 3,
+                opacity: 0.7,
+                dashArray: "10, 5",
+              }
+            ).addTo(map);
+
+            // Calculating distance
+            const distance = map.distance(
+              [userLat, userLng],
+              [bakeryLat, bakeryLng]
+            );
+            const distanceKm = (distance / 1000).toFixed(2);
+
+            showNotification(
+              `You are ${distanceKm} km from the bakery`,
+              "info"
+            );
+
+            locateMeBtn.textContent = "My Location";
+            locateMeBtn.disabled = false;
+          },
+          function (error) {
+            showNotification("Unable to get your location", "error");
+            locateMeBtn.textContent = "My Location";
+            locateMeBtn.disabled = false;
+          }
+        );
+      } else {
+        showNotification(
+          "Geolocation is not supported by your browser",
+          "error"
+        );
+      }
+    });
+  }
 }
 
 // Cart Functionality - I'm implementing the shopping cart system
@@ -744,13 +878,40 @@ function initializeContactForm() {
       submitButton.textContent = "Sending...";
       submitButton.disabled = true;
 
-      // Simulation form submission
+      // Collecting form data
+      const formData = {
+        name: document.getElementById("contact-name").value,
+        email: document.getElementById("contact-email").value,
+        phone: document.getElementById("contact-phone").value,
+        subject: document.getElementById("contact-subject").value,
+        message: document.getElementById("contact-message").value,
+      };
+
+      // Simulating email sending
       setTimeout(() => {
-        showNotification("Message sent successfully!", "success");
+        // Creating email body
+        const emailBody = `
+Name: ${formData.name}
+Email: ${formData.email}
+Phone: ${formData.phone}
+Subject: ${formData.subject}
+
+Message:
+${formData.message}
+        `;
+
+        // Opening default email client with pre-filled information
+        const mailtoLink = `mailto:info@delighthomebakery.co.za?subject=${encodeURIComponent(
+          "Contact Form: " + formData.subject
+        )}&body=${encodeURIComponent(emailBody)}`;
+
+        window.location.href = mailtoLink;
+
+        showNotification("Opening your email client...", "success");
         this.reset();
         submitButton.textContent = originalText;
         submitButton.disabled = false;
-      }, 2000);
+      }, 1000);
     });
   }
 }

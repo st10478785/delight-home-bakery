@@ -1,14 +1,14 @@
 /* I improved on navigation by using pseudo classes for better user interaction as stated in the feedback */
-/* I fixed mobile navigation to display as block-level elements */
+/* I fixed mobile navigation to display as block level elements */
 
-/* CSS Reset - This ensures consistent styling across all browsers by removing default margins and paddings */
+/* CSS Reset - Ensures consistent styling across all browsers */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* CSS Color Variables - I'm using CSS custom properties for easy theme management */
+/* CSS Color Variables - Using CSS custom properties for easy theme management */
 :root {
   --primary-color: #1c2d26;
   --secondary-color: #e8a735;
@@ -22,12 +22,12 @@
   --error-color: #e74c3c;
   --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   --shadow-hover: 0 8px 20px rgba(0, 0, 0, 0.12);
-  --transition: all 0.5s ease;
+  --transition: all 0.3s ease;
   --border-radius: 10px;
   --max-width: 1200px;
 }
 
-/* I added a dark mode color scheme with better contrast and visibility */
+/* Dark mode color scheme with better contrast */
 [data-theme="dark"] {
   --primary-color: #4a6b5a;
   --secondary-color: #ffb84d;
@@ -41,7 +41,7 @@
   --shadow-hover: 0 8px 20px rgba(0, 0, 0, 0.5);
 }
 
-/* Base HTML and Body Styles - For setting up smooth scrolling and base font size */
+/* Base HTML and Body Styles */
 html {
   scroll-behavior: smooth;
   font-size: 16px;
@@ -56,7 +56,7 @@ body {
   transition: var(--transition);
 }
 
-/* Typography System - I'm using a hierarchical scale for consistent text sizing */
+/* Typography System */
 h1,
 h2,
 h3,
@@ -70,7 +70,6 @@ h6 {
   letter-spacing: -0.5px;
 }
 
-/* Making sure that the headings are visible in dark mode */
 [data-theme="dark"] h1,
 [data-theme="dark"] h2,
 [data-theme="dark"] h3,
@@ -107,43 +106,34 @@ p {
   font-size: 1.15rem;
 }
 
-/* Link Styles - I implemented all five pseudo classes as required by the feedback */
+/* Link Styles - All five pseudo classes implemented */
 a {
   text-decoration: none;
   transition: var(--transition);
   font-weight: 600;
 }
 
-/* Link state - This is the default appearance of unvisited links */
 a:link {
   color: var(--secondary-color);
 }
-
-/* Visited state - This shows which links the user has already clicked */
 a:visited {
   color: #b87f0d;
 }
-
-/* Hover state - This gives visual feedback when user hovers over links */
 a:hover {
   color: var(--accent-color);
   transform: translateY(-2px);
 }
-
-/* Active state - This shows the link is being clicked right now */
 a:active {
   color: #a84300;
   transform: translateY(0);
 }
-
-/* Focus state - This helps with keyboard navigation accessibility */
 a:focus {
   outline: 2px solid var(--secondary-color);
   outline-offset: 2px;
   border-radius: 4px;
 }
 
-/* Layout Containers - Max width for responsive centering */
+/* Layout Containers */
 .container {
   width: 100%;
   max-width: var(--max-width);
@@ -155,7 +145,6 @@ a:focus {
   padding: 2.5rem 0;
 }
 
-/* Dark styling for better text visibility */
 .section-dark {
   background-color: var(--primary-color);
   color: white;
@@ -166,8 +155,6 @@ a:focus {
 .section-dark h3 {
   color: white;
 }
-
-/* Padding for mission text to prevent it from touching edges */
 .section-dark p {
   max-width: 900px;
   margin-left: auto;
@@ -175,7 +162,7 @@ a:focus {
   padding: 0 2rem;
 }
 
-/* Header and Navigation - I made this sticky for better user experience */
+/* Header and Navigation */
 header {
   background-color: var(--light-background);
   box-shadow: var(--shadow);
@@ -213,7 +200,6 @@ header {
   transform: rotate(5deg);
 }
 
-/* Logo text display */
 .logo-text {
   display: flex;
   flex-direction: column;
@@ -234,7 +220,7 @@ header {
   font-style: italic;
 }
 
-/* Navigation - I used flexbox for horizontal layout on desktop */
+/* Navigation with all five pseudo classes */
 nav ul {
   display: flex;
   list-style: none;
@@ -255,38 +241,27 @@ nav a {
   display: block;
 }
 
-/* I implemented all five pseudo classes for navigation as required by feedback */
-/* Link state for navigation - default appearance */
 nav a:link {
   background-color: transparent;
   color: var(--primary-color);
 }
-
-/* Visited state for navigation - shows visited pages */
 nav a:visited {
   color: var(--primary-color);
 }
-
-/* Hover state for navigation - gives interactive feedback */
 nav a:hover {
   color: var(--secondary-color);
   background-color: rgba(232, 167, 53, 0.1);
   transform: translateY(-2px);
 }
-
-/* Active state for navigation - shows the link is being clicked */
 nav a:active {
   background-color: rgba(232, 167, 53, 0.2);
   transform: translateY(0);
 }
-
-/* Focus state for navigation - helps with keyboard navigation */
 nav a:focus {
   outline: 2px solid var(--secondary-color);
   outline-offset: 2px;
 }
 
-/* Highlighting the current page in the navigation */
 nav li:not(:has(a)) {
   color: var(--secondary-color);
   font-weight: bold;
@@ -295,7 +270,7 @@ nav li:not(:has(a)) {
   border-radius: 4px;
 }
 
-/* Header Actions - Contains cart, theme toggle, and mobile menu */
+/* Header Actions */
 .header-actions {
   display: flex;
   align-items: center;
@@ -315,7 +290,6 @@ nav li:not(:has(a)) {
   transform: scale(1.1);
 }
 
-/* Showing the cart count by default and showing it when items are added */
 .cart-count {
   position: absolute;
   top: -8px;
@@ -328,7 +302,7 @@ nav li:not(:has(a)) {
   display: none;
 }
 
-/* Dark Mode Toggle Button - Interactive with hover effects */
+/* Dark Mode Toggle Button */
 .theme-toggle {
   background: var(--primary-color);
   color: white;
@@ -348,13 +322,12 @@ nav li:not(:has(a)) {
 .theme-toggle:active {
   transform: translateY(0);
 }
-
 .theme-toggle:focus {
   outline: 2px solid var(--secondary-color);
   outline-offset: 2px;
 }
 
-/* Mobile Menu Hamburger - Hidden on desktop and Visible on mobile */
+/* Mobile Menu Hamburger */
 .mobile-menu {
   display: none;
   flex-direction: column;
@@ -370,15 +343,12 @@ nav li:not(:has(a)) {
   transition: var(--transition);
 }
 
-/* Animating the hamburger menu into an X when active */
 .mobile-menu.active span:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
 }
-
 .mobile-menu.active span:nth-child(2) {
   opacity: 0;
 }
-
 .mobile-menu.active span:nth-child(3) {
   transform: rotate(-45deg) translate(7px, -6px);
 }
@@ -403,7 +373,7 @@ nav li:not(:has(a)) {
   margin-bottom: 0;
 }
 
-/* Hero Section - Main banner on the home page */
+/* Hero Section */
 .hero {
   background: var(--primary-color);
   color: white;
@@ -428,7 +398,7 @@ nav li:not(:has(a)) {
   flex-wrap: wrap;
 }
 
-/* Button Styles - Consistent button styling across the site */
+/* Button Styles */
 .cta-button,
 .checkout-button,
 .add-to-cart,
@@ -445,7 +415,9 @@ nav li:not(:has(a)) {
   font-size: 1rem;
   box-shadow: var(--shadow);
 }
-.hero-buttons .cta-button:first-child, .visit .cta-button{
+
+.hero-buttons .cta-button:first-child,
+.visit .cta-button {
   background-color: #e8a735 !important;
   color: #000000 !important;
   border-color: #ffffff !important;
@@ -455,18 +427,15 @@ nav li:not(:has(a)) {
 .checkout-button {
   padding: 1rem 2rem;
 }
-
 .add-to-cart {
   padding: 0.8rem 1.5rem;
   margin-top: 1rem;
   width: 100%;
 }
-
 .add-to-cart-small {
   padding: 0.5rem 1rem;
 }
 
-/* Hover effects to make buttons interactive */
 .cta-button:hover,
 .checkout-button:hover,
 .add-to-cart:hover,
@@ -493,7 +462,7 @@ nav li:not(:has(a)) {
   color: var(--primary-color);
 }
 
-/* Grid Layouts - CSS Grid for responsive layouts */
+/* Grid Layouts */
 .features,
 .specials-grid,
 .menu-grid,
@@ -506,22 +475,19 @@ nav li:not(:has(a)) {
 .features {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
-
 .specials-grid,
 .menu-grid {
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   list-style: none;
 }
-
 .testimonial-grid {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
-
 .footer-content {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
-/* Card Components - Reusable card styles for products and features */
+/* Card Components */
 .feature,
 .special-item,
 .menu-item {
@@ -537,7 +503,6 @@ nav li:not(:has(a)) {
   padding: 1.5rem;
 }
 
-/* Hover effects to make cards interactive */
 .feature:hover,
 .special-item:hover,
 .menu-item:hover {
@@ -574,7 +539,7 @@ nav li:not(:has(a)) {
   transform: scale(1.05);
 }
 
-/* Product Badges - Highlight special products */
+/* Product Badges */
 .item-badge {
   position: absolute;
   top: 15px;
@@ -591,15 +556,12 @@ nav li:not(:has(a)) {
 .badge-best-seller {
   background-color: var(--secondary-color);
 }
-
 .badge-popular {
   background-color: #3498db;
 }
-
 .badge-favorite {
   background-color: #e74c3c;
 }
-
 .badge-new {
   background-color: #2ecc71;
 }
@@ -625,7 +587,7 @@ nav li:not(:has(a)) {
   margin: 0.5rem 0;
 }
 
-/* Section Titles - Centering with decorative underlines */
+/* Section Titles */
 .section-title {
   text-align: center;
   margin-bottom: 2rem;
@@ -641,7 +603,6 @@ nav li:not(:has(a)) {
   border-radius: 2px;
 }
 
-/* Centering product category headings */
 .category-section .section-title {
   text-align: center;
   margin-bottom: 2rem;
@@ -659,7 +620,7 @@ nav li:not(:has(a)) {
   margin: 0;
 }
 
-/* About Page Improvements - Layout and structure */
+/* About Page */
 .about-section {
   margin-bottom: 4rem;
 }
@@ -680,7 +641,6 @@ nav li:not(:has(a)) {
 .about-text {
   padding: 1rem;
 }
-
 .about-text p {
   font-size: 1.1rem;
   line-height: 1.8;
@@ -711,7 +671,7 @@ nav li:not(:has(a)) {
   font-size: 1.1rem;
 }
 
-/* Gallery Grid - Responsive image gallery */
+/* Gallery Grid */
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -739,7 +699,7 @@ nav li:not(:has(a)) {
   transition: var(--transition);
 }
 
-/* Products Page - Filter Tabs for categories */
+/* Filter Tabs */
 .filter-section {
   margin: 2rem 0;
 }
@@ -775,13 +735,12 @@ nav li:not(:has(a)) {
   border-color: var(--secondary-color);
 }
 
-/* Category Sections - Organizing products by category */
 .category-section {
   margin-bottom: 3rem;
   animation: fadeIn 0.5s ease;
 }
 
-/* Search Functionality - Adding product search features */
+/* Search Functionality */
 .search-section {
   margin: 2rem 0;
 }
@@ -863,7 +822,7 @@ nav li:not(:has(a)) {
   color: var(--light-text);
 }
 
-/* Enquiry Page - Improving the ordering information layout */
+/* Enquiry Page */
 .order-section {
   margin-bottom: 3rem;
 }
@@ -883,7 +842,6 @@ nav li:not(:has(a)) {
   border: none;
 }
 
-/* ordering information section layout */
 .order-info {
   background: var(--light-background);
   padding: 2.5rem;
@@ -985,6 +943,7 @@ nav li:not(:has(a)) {
   border-bottom: none;
 }
 
+/* Interactive Map Styling */
 .contact-map {
   background: var(--light-background);
   padding: 2rem;
@@ -992,12 +951,37 @@ nav li:not(:has(a)) {
   box-shadow: var(--shadow);
 }
 
-.contact-map iframe {
+#map {
   width: 100%;
+  height: 400px;
   border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  margin-bottom: 1rem;
 }
 
-/* Contact Form Styling */
+.map-controls {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.map-button {
+  padding: 0.7rem 1.5rem;
+  background-color: var(--secondary-color);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: var(--transition);
+  font-weight: 600;
+}
+
+.map-button:hover {
+  background-color: var(--accent-color);
+  transform: translateY(-2px);
+}
+
+/* Contact Form */
 .contact-form-section {
   margin: 3rem 0;
 }
@@ -1076,7 +1060,7 @@ nav li:not(:has(a)) {
   display: none;
 }
 
-/* Checkout Page - Layout and adding cart display functionality */
+/* Checkout Page */
 .checkout-container {
   display: grid;
   grid-template-columns: 1fr 1.2fr;
@@ -1097,7 +1081,6 @@ nav li:not(:has(a)) {
   text-align: center;
 }
 
-/* I styled the empty cart state */
 .empty-state {
   text-align: center;
   padding: 3rem 1rem;
@@ -1109,7 +1092,6 @@ nav li:not(:has(a)) {
   margin-bottom: 1.5rem;
 }
 
-/* Created a table for order items that will be populated by JavaScript */
 #checkout-items {
   width: 100%;
   margin-bottom: 1rem;
@@ -1133,7 +1115,6 @@ nav li:not(:has(a)) {
   color: var(--primary-color);
 }
 
-/* Checkout Steps Progress Indicator */
 .checkout-steps {
   display: flex;
   justify-content: space-between;
@@ -1173,7 +1154,7 @@ nav li:not(:has(a)) {
   color: var(--primary-color);
 }
 
-/* Checkout Form Section */
+/* Checkout Form */
 .checkout-form-section {
   background: var(--light-background);
   padding: 2rem;
@@ -1193,34 +1174,6 @@ nav li:not(:has(a)) {
   padding: 0 0.5rem;
   color: var(--primary-color);
   font-size: 1.2rem;
-}
-
-.checkout-form .form-group {
-  margin-bottom: 1rem;
-}
-
-.checkout-form label {
-  display: block;
-  margin-bottom: 0.5rem;
-  font-weight: 600;
-  color: var(--primary-color);
-}
-
-.checkout-form input,
-.checkout-form select {
-  width: 100%;
-  padding: 0.8rem;
-  border: 2px solid var(--border-color);
-  border-radius: var(--border-radius);
-  font-size: 1rem;
-  transition: var(--transition);
-}
-
-.checkout-form input:focus,
-.checkout-form select:focus {
-  outline: none;
-  border-color: var(--secondary-color);
-  box-shadow: 0 0 0 3px rgba(232, 167, 53, 0.2);
 }
 
 /* Profile Page */
@@ -1293,7 +1246,7 @@ nav li:not(:has(a)) {
   font-weight: normal;
 }
 
-/* Tables for Order History */
+/* Tables */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -1321,7 +1274,7 @@ tr:hover {
   background-color: rgba(232, 167, 53, 0.05);
 }
 
-/* Testimonials Section - Customer reviews */
+/* Testimonials */
 .testimonials {
   background-color: var(--primary-color);
   color: white;
@@ -1368,7 +1321,7 @@ tr:hover {
   font-size: 0.9rem;
 }
 
-/* Visit Us section layout on home page, fixes */
+/* Visit Section */
 .visit {
   background-color: var(--light-background);
   text-align: center;
@@ -1396,7 +1349,7 @@ tr:hover {
   line-height: 1.8;
 }
 
-/* Newsletter Section */
+/* Newsletter */
 .newsletter {
   background: linear-gradient(135deg, var(--primary-color) 0%, #2a4a3a 100%);
   color: white;
@@ -1450,7 +1403,7 @@ tr:hover {
   transform: translateY(-2px);
 }
 
-/* Accordion FAQ Section - Interactive elements for Part 3 */
+/* Accordion FAQ */
 .faq-section {
   margin: 3rem 0;
 }
@@ -1513,7 +1466,7 @@ tr:hover {
   margin: 0;
 }
 
-/* Lightbox for Gallery - Implementing this for Part 3 image viewing */
+/* Lightbox */
 .lightbox {
   display: none;
   position: fixed;
@@ -1557,7 +1510,7 @@ tr:hover {
   font-size: 1.1rem;
 }
 
-/* Footer Section - I'm keeping this consistent across all pages */
+/* Footer */
 footer {
   background-color: var(--primary-color);
   color: white;
@@ -1618,7 +1571,7 @@ footer {
   margin-top: 2rem;
 }
 
-/* Animations - Adding smooth transitions throughout the site */
+/* Animations */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -1639,24 +1592,21 @@ footer {
   }
 }
 
-/* Responsive Design - Making the site work on all devices */
-/* Tablet breakpoint */
+/* Responsive Design */
 @media (max-width: 1024px) {
   .checkout-container {
     grid-template-columns: 1fr;
   }
-
   .contact-grid {
     grid-template-columns: 1fr;
   }
 }
 
-/* Mobile breakpoint - Implementing block-level navigation as per feedback */
+/* Mobile breakpoint - Block-level navigation */
 @media (max-width: 768px) {
   html {
     font-size: 14px;
   }
-
   h1 {
     font-size: 2.5rem;
   }
@@ -1667,7 +1617,6 @@ footer {
     font-size: 1.6rem;
   }
 
-  /* The logo text stack vertically on mobile */
   .logo-text {
     flex-direction: column;
     gap: 2px;
@@ -1676,12 +1625,10 @@ footer {
   .logo-text h1 {
     font-size: 1.3rem;
   }
-
   .logo-text span {
     font-size: 0.85rem;
   }
 
-  /* Restructuring the header for mobile as per feedback */
   .header-container {
     flex-wrap: wrap;
     padding: 10px 15px;
@@ -1707,7 +1654,7 @@ footer {
     order: 3;
   }
 
-  /* Implementing block level navigation for mobile as required by feedback */
+  /* Block-level navigation for mobile */
   nav {
     order: 4;
     width: 100%;
@@ -1721,7 +1668,6 @@ footer {
     margin-top: 15px;
   }
 
-  /* This transforms navigation to vertical block layout on mobile */
   nav ul {
     flex-direction: column;
     gap: 0;
@@ -1746,7 +1692,6 @@ footer {
     width: 100%;
   }
 
-  /* Adjusting hero section for mobile */
   .hero {
     padding: 2rem 1rem;
     min-height: 50vh;
@@ -1767,7 +1712,6 @@ footer {
     max-width: 250px;
   }
 
-  /* Making grids single column on mobile */
   .features,
   .specials-grid,
   .menu-grid,
@@ -1776,13 +1720,11 @@ footer {
     grid-template-columns: 1fr;
   }
 
-  /* Adjusting about page for mobile */
   .about-content,
   .baker-profile {
     grid-template-columns: 1fr;
   }
 
-  /* Adjusting form layouts for mobile */
   .form-row {
     grid-template-columns: 1fr;
   }
@@ -1797,7 +1739,6 @@ footer {
     width: 100%;
   }
 
-  /* Making filter tabs wrap better on mobile */
   .filter-tabs {
     gap: 0.5rem;
   }
@@ -1807,13 +1748,23 @@ footer {
     font-size: 0.9rem;
   }
 
-  /* Adjusting section dark padding for mobile */
   .section-dark p {
     padding: 0 1rem;
   }
+
+  #map {
+    height: 300px;
+  }
+
+  .map-controls {
+    flex-direction: column;
+  }
+
+  .map-button {
+    width: 100%;
+  }
 }
 
-/* Small mobile devices */
 @media (max-width: 480px) {
   .logo-container img {
     width: 60px;
@@ -1823,7 +1774,6 @@ footer {
   .logo-text h1 {
     font-size: 1.1rem;
   }
-
   .logo-text span {
     font-size: 0.75rem;
   }
@@ -1851,7 +1801,6 @@ footer {
   }
 }
 
-/* Print styles - Optimizing for printing */
 @media print {
   header,
   footer,
